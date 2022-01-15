@@ -1,0 +1,49 @@
+@import './variables';
+html {
+    font-size: 10px;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+p, ul, span, button {
+    // font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+}
+h1{
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, p, ul, button {
+    color: #1a1a1a;
+}
+
+a{
+    color: #1D4ED8
+}
+
+button {
+    background: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.pageContainer {
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 200px;
+    position: relative;
+    flex-direction: column;
+    // justify-content: space-between;
+    // background-color: rgb(207, 207, 207);
+}

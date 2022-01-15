@@ -1,0 +1,14 @@
+.tableOfContents {
+    position: sticky;
+    top: 14rem;
+    
+    
+    ul {
+        list-style-type: none;
+        color: #1d4ed8;
+
+        li:not(:last-child) {
+            margin-bottom: 2.6rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.appointmentMain {
+
+    .appointmentContent {
+        padding-top: 7rem 0;
+       
+
+        .introSection {
+            background-color: #1D4ED8;
+            width: 100%;
+            padding: 7rem;
+
+            p{
+                font-size: 1.6rem;
+                color: #ffffff;
+            }
+
+        }
+
+        .formSection {
+            padding: 7rem 0;
+        }
+
+        .appointmentSubmit {
+            input[type='submit'] {
+                cursor: pointer;
+                font-size: 1.6rem;
+                background: white;
+                border: 1px solid #1a1a1a;
+                border-radius: 5px;
+                padding: 1.6rem 3.2rem;
+                transition: transform 0.2s ;
+
+                &:hover {
+                    background-color: #1a1a1a;
+                    color: white;
+                    transform: translateY(-2px);
+                }
+
+            }
+        }
+
+        
+    }
+
+    
+}

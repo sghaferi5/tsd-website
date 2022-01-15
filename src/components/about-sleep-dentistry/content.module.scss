@@ -1,0 +1,68 @@
+.content section {    
+    margin-bottom: 4.2rem;
+    h2 {
+        margin-bottom: 1.6rem; 
+    }
+    p {
+        &:not(:first-child) {
+            margin-top: 1.6rem;
+        }
+    }
+    p, ul {
+        color: #606060;
+        line-height: 3rem;
+    }
+
+    p > span {
+        font-style: italic;
+        display: block;
+  }
+
+
+    .levelsList {
+        list-style-type: none;
+        position: relative;
+        margin: 2.2rem 0;
+        line-height: 1.6rem;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 1.6rem;
+            background: rgb(7,200,249);
+            background: linear-gradient(180deg, rgba(7,200,249,1) 0%, rgba(13,65,225,1) 100%);
+            position: absolute;
+            top: 0;
+            border-radius: 0.8rem;
+
+        }
+
+        li {
+            font-weight: 500;
+            padding-left: 3rem;
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+
+        }
+    }
+
+    ul {
+        margin-left: 3.2rem;
+    }
+
+    .studies {
+        margin-top: 2.4rem;
+        padding: 3rem;
+        background-color: #dbeafe;
+        border-radius: 5px;
+    }
+}
+:target:before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin: -80px 0 0;
+}
+

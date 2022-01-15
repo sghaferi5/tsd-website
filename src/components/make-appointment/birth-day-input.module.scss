@@ -1,0 +1,51 @@
+.birthdayForm {
+    display: flex;
+
+    .twoDigitInput, .fourDigitInput {
+        display: flex;
+        flex-direction: column;
+
+        & p {
+            font-size: 1.6rem;
+            color: #606060;
+            margin-bottom: 5px;
+        }
+
+        & input {
+            font-size: 1.6rem;
+            display: block;
+            height: 4.2rem;
+            width: 100%;
+            padding: 1rem;
+            border: 1px #aaaaaa solid;
+            border-radius: 5px;
+            color: #606060;
+            text-align: center;
+        }
+    }
+    .twoDigitInput {
+        margin-right: 1.6rem;
+
+        & input {
+            width: 5.4rem;
+        }
+    }
+
+    .fourDigitInput {
+        margin-right: 1.6rem;
+
+        & input {
+            width: 9.2rem;
+        }
+    }
+}
+
+.birthdayInput {
+    .errorMessage {
+        p{
+            color: red;
+            font-size: 1.4rem;
+        }
+
+    }
+}

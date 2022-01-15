@@ -1,0 +1,13 @@
+$base-color : rgb(255, 118, 38);
+$text-color: rgb(36, 36, 36);
+
+.main {
+    background-color: $base-color;
+
+    overflow: auto;
+        h1 {
+            font-size: 50px;
+            background: lightblue;
+            color: $text-color;
+        }
+} 

@@ -1,0 +1,13 @@
+.formLabel {
+    color: #1a1a1a;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: inline-block;
+    line-height: 2.6rem;
+
+    span {
+        color: red;
+        font-weight: 600;
+    }
+}

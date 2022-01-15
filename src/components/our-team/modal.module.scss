@@ -1,0 +1,82 @@
+.modal {
+    width:  100vw;
+    height: 100vh;
+    background-color: rgba($color: #ffffff, $alpha: 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 28px;
+
+    .modalDialog {
+        padding: 3rem;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-radius: 12px;
+
+        .modalContent {
+            display: block;
+            clear: all;
+
+            .closeBtn {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                // background: #adb5bd;
+
+                img {
+                    height: 4.5rem;
+                    align-self:flex-end;
+                    flex-shrink: 1;
+                    cursor: pointer;
+                }
+            }
+
+            .headingBlock {
+                p {
+                    font-style: italic;
+                }
+            }
+
+            h1{
+                color: #ffffff;
+                font-size: 5rem;
+                margin: 0;
+            }
+            p {
+                color: #adb5bd;
+                font-size: 1.6rem;
+                line-height: 3rem;
+                // font-style: italic;
+            }
+
+            .modalBio {
+                margin-top: 3.2rem;
+                p:not(:first-child) {
+                    margin-top: 3rem;
+                }
+            }
+            .fullBioMsg {
+                margin-top: 3.2rem;
+                background-color: #ffffff;
+                padding: 0.8rem 1.6rem;
+                border-radius: 5px;
+                color: #1a1a1a;
+
+                a{
+                    color: #1d4ed8;
+                }
+            }
+
+            .photoWrap {
+                img {
+                    width: 100%;
+                border: 16px #ffffff solid ;
+
+                }
+            }
+        }
+    }
+}

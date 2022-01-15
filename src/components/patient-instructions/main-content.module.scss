@@ -1,0 +1,44 @@
+.mainContent {
+    p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        text-align: center;
+        color: #606060;
+    }
+
+ 
+
+    .mainTop {
+        margin-top: 10rem;
+    }
+    .btmSection {
+        margin: 7rem 0;
+    }
+    .btmSectionBlock {
+        padding: 7.2rem 0;
+        background-color: #ededed;
+        
+        &:nth-child(2) {
+            background-color: #1a1a1a;
+
+            h2, a {
+                color: #ffffff;
+            }
+             
+        }
+
+            text-align: center;
+
+            a { 
+                display: block;
+                font-size: 1.6rem;
+                margin-top: 4.8rem;
+                color: #606060;
+
+                &:last-child {
+                    margin-top: 2.4rem;
+                }
+            }
+        
+    }
+}

@@ -1,0 +1,16 @@
+.pageBanner {
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.4); /* Tint color */
+    display: flex;
+    align-items: center;
+
+    h1{ 
+        color: #ffff;
+        font-size: 4.8rem;
+        letter-spacing: 0.4rem;
+    }
+}
+
+.pageBannerBlank {
+    background-color: #1a1a1a;
+}
