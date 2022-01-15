@@ -4,7 +4,7 @@ import PageBanner from '../page-banner/page-banner'
 const ReferringDoctorsMain = () => {
     return (
         <div >
-            <PageBanner heading='Referring Doctors' bgImage='referring doctors' />
+            <PageBanner heading='Referring Doctors!' bgImage='referring doctors' />
         </div>
     )
 }
