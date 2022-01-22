@@ -5,10 +5,13 @@ import MainFooter from '../components/footer/main-footer'
 import "normalize.css"
 import '../styles/style.scss'
 import '../styles/bootstrap-grid.min.css'
+import { useEffect } from 'react'
 
 
 const Layout = ({ pageTitle, children }) => {
-    document.documentElement.style.overflow=null
+    useEffect(() => {
+        document.documentElement.style.overflow = null
+    })
 
     return (
 

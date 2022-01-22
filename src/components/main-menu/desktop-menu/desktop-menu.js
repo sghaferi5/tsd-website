@@ -42,11 +42,10 @@ const DesktopMenu = () => {
 
 
     return (
-        <header>
+        <header className={styles.menuDesktop}>
             <div className={styles.header_wrap}>
                 <div className={`${styles.menuLogoXl} ${styles.deskTopMenuLogo}`}>
                     <Link to='/'>
-
                         <img
                             src={logoSvg}
                             alt='Toronto Sleep Dentistry Logo'

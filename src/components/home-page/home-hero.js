@@ -34,11 +34,13 @@ const MainHero = () => {
     return (
         <BackgroundImage
             Tag="section"
+            className={styles.heroSectionBlock}
+            style={{ overflowX: 'hiden' }}
             fluid={imageData}
         >
             <div className={styles.hero}>
-                <Container style={inlineStyles.containerEl}>
-                    <Row style={inlineStyles.rowEl}>
+                <Container >
+                    <Row>
                         <Col>
                             <h1>Specialists In <br />Dental Anaesthesia</h1>
                             <ul>

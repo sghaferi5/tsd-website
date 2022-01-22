@@ -2,13 +2,13 @@ import * as React from 'react'
 
 import * as styles from './form-select-list.module.scss'
 
-const FormSelectList = ({list, listGroup, formData, setFormData}) => {
+const FormSelectList = ({ list, listGroup, formData, setFormData }) => {
 
     let newFormData = Object.assign({}, formData);
 
 
     const updateSelected = (event) => {
-        
+
         if (event.target.checked) {
             newFormData.values[listGroup].val.push(event.target.value)
             setFormData(newFormData)
@@ -18,26 +18,26 @@ const FormSelectList = ({list, listGroup, formData, setFormData}) => {
         }
     }
 
-   
+
     return (
         <div className={styles.formSelectList}>
-        <ul>
-          {list.map((item) => (
-              
-        <li>
-            <label
-            htmlFor={item.for}>
-                <input 
-                type="checkbox" 
-                name="" 
-                id={item.for} 
-                value={item.value} 
-                onChange={updateSelected} />
-                {item.value}
-            </label>
-        </li>
-         ))}
-        </ul>
+            <ul>
+                {list.map((item) => (
+
+                    <li>
+                        <label
+                            htmlFor={item.for}>
+                            <input
+                                type="checkbox"
+                                name=""
+                                id={item.for}
+                                value={item.value}
+                                onChange={updateSelected} />
+                            {item.value}
+                        </label>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

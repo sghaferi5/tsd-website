@@ -1,0 +1,36 @@
+header.menuMobile {
+    display: none;
+
+    @media only screen and (max-width: 991.98px) {
+        display: block;
+        height: 7rem;
+        border-bottom: 1px solid #eeeeee;
+        background-color: rgba($color: #ffffff, $alpha: 0.98);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: transform 0.25s ease-out;
+        z-index: 999;
+
+        .mobileMenuBarWrap {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            padding: 0 1.2rem;
+
+            img {
+                display: block;
+                width: 24rem;
+                justify-content:flex-start;
+            }
+            button {
+                margin-left: auto;
+
+                svg {
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}
