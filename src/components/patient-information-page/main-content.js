@@ -74,8 +74,8 @@ const MainContent = () => {
                     <Row>
                         <Col md={{ span: 8, offset: 2 }}>
                             <h2>Patient Safety</h2>
-                            <p>Sleep Dentistry is a very safe and low risk procedure. Please visit our “About Sleep Dentistry” page and read the entire section on the safety profile of sleep dentistry by <Link to='#'>clicking here</Link>.</p>
-                            <button>Book An Appointment</button>
+                            <p>Sleep Dentistry is a very safe and low risk procedure. Please visit our “About Sleep Dentistry” page and read the entire section on the safety profile of sleep dentistry by <Link to='/about-sleep-dentistry'>clicking here</Link>.</p>
+                            <Link to='/make-an-appointment'><button>Make An Appointment</button></Link>
                         </Col>
                     </Row>
                 </Container>

@@ -1,0 +1,22 @@
+.rdForm {
+    padding: 7rem 0;
+    .referralSubmit {
+        input[type='submit'] {
+            margin-top: 3rem;
+            cursor: pointer;
+            font-size: 1.6rem;
+            background: white;
+            border: 1px solid #1a1a1a;
+            border-radius: 5px;
+            padding: 1.6rem 3.2rem;
+            transition: transform 0.2s ;
+
+            &:hover {
+                background-color: #1a1a1a;
+                color: white;
+                transform: translateY(-2px);
+            }
+
+        }
+    }
+}

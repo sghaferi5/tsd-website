@@ -1,15 +1,9 @@
 import * as React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { Container, Row, Col } from 'react-bootstrap'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
 
-import MailIcon from '../../images/mail-fill.svg'
-
 import * as styles from './home-hero.module.scss'
-
-// import heroImage from '../../images/hero_bg.jpg'
 
 const MainHero = () => {
     const { placeholderImage } = useStaticQuery(
@@ -17,7 +11,7 @@ const MainHero = () => {
           query {
             placeholderImage: file(relativePath: { eq: "hero-bg.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 90, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -40,10 +34,7 @@ const MainHero = () => {
     return (
         <BackgroundImage
             Tag="section"
-            // style={{ width: 300, height: 300 }}
-            // className={styles.saeid}
             fluid={imageData}
-            backgroundColor={`#040e18`}
         >
             <div className={styles.hero}>
                 <Container style={inlineStyles.containerEl}>

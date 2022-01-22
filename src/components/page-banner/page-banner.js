@@ -12,7 +12,7 @@ const PageBanner = (props) => {
           query {
             patientInformationImage: file(relativePath: { eq: "Patient-Information-2.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 100, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -20,7 +20,7 @@ const PageBanner = (props) => {
 
             patientInstructionsImage: file(relativePath: { eq: "Patient-Instructions.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 100, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -28,7 +28,7 @@ const PageBanner = (props) => {
 
             ourTeamImage: file(relativePath: { eq: "our-team.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 100, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -36,7 +36,7 @@ const PageBanner = (props) => {
 
             aboutSleepDentistryImage: file(relativePath: { eq: "about-sleep-dentistry.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 100, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -44,7 +44,7 @@ const PageBanner = (props) => {
 
             contactUsImage: file(relativePath: { eq: "contact-us.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 100, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -52,7 +52,7 @@ const PageBanner = (props) => {
 
             referringDoctorsImage: file(relativePath: { eq: "referring-doctors.jpg" }) {
                 childImageSharp {
-                    fluid(quality: 100, maxWidth: 1920) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -196,15 +196,21 @@ const PageBanner = (props) => {
         default:
             return (
                 <div>
-                    <div className={`${styles.pageBanner} ${styles.pageBannerBlank}`}>
-                        <Container>
-                            <Row>
-                                <Col>
-                                    <h1>{props.heading}</h1>
-                                </Col>
-                            </Row>
-                        </Container>
-                    </div>
+                    <BackgroundImage
+                        Tag="section"
+                        fluid={aboutSleepDentistryImageData}
+                        backgroundColor={`#040e18`}
+                    >
+                        <div className={styles.pageBanner}>
+                            <Container>
+                                <Row>
+                                    <Col>
+                                        <h1>{props.heading}</h1>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                    </BackgroundImage>
                 </div>
             )
     }

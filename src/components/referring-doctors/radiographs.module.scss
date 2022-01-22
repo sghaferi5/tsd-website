@@ -1,0 +1,65 @@
+.radiographsWrap {
+    ul {
+        list-style-type: none;
+
+        li {
+            padding: 2px;
+
+            label {
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #606060;
+                cursor: pointer;
+
+                input {
+                    display: inline-block;
+                    margin-right: 6px;
+                }
+            }
+
+            input[type='text'] {
+                font-size: 1.6rem;
+                display: block;
+                height: 4.2rem;
+                width: 100%;
+                padding: 1rem;
+                border: 1px #aaaaaa solid;
+                border-radius: 5px;
+                color: #606060;
+                margin-top: 8px;
+            }
+
+            textarea {
+                display: block;
+                width: 100%;
+                height: 10rem;
+                padding: 1rem;
+                border: 1px #aaaaaa solid;
+                border-radius: 5px;
+                color: #606060;
+                font-size: 1.6rem;
+            }
+
+            .standardLabel {
+                font-size: 1.6rem;
+                color: #1a1a1a;
+                margin-bottom: 8px;
+                margin-top: 2rem;
+                font-weight: 400;
+            }
+
+            input[type='file'] {
+                button {
+                    background: red;
+                }
+            }
+        }
+    }
+
+    .errorMessage {
+        color: red;
+    font-size: 1.4rem;
+    }
+}   

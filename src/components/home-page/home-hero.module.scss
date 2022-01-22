@@ -3,8 +3,6 @@
     height: calc(100vh - 7rem);
     min-height: 50rem;
     background-color: rgba(0, 0, 0, 0.4); /* Tint color */
-    // background-color: #1a1a1a;
-    // overflow: auto;
     font-size: 1.6rem;
         h1, h2, p, ul {
             color: #ffffff;
@@ -76,8 +74,6 @@
             justify-content: center;
             
             .insideFrame {
-                // background-color: aqua;
-                // overflow: hidden;
                 height: 80%;
                 display: inline-block;
                 border: 0.8rem solid #ffffff;

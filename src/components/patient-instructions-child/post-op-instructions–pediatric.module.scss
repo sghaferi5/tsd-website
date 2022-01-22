@@ -1,0 +1,53 @@
+.postOpInstructions {
+    padding-bottom: 7rem;
+    .headlineSection {
+        margin-bottom: 3.6rem;
+        background-color: #ededed;
+        padding: 7rem 0;
+        text-align: center;
+
+        h1 {
+            font-size: 4.2rem;
+            margin-top: 0;
+            margin-bottom: 1.6rem;
+        }
+        
+    }
+
+    section {
+        &:not(:last-child) {
+            padding-bottom: 1.6rem;
+            margin-bottom: 2.4rem;
+            border-bottom: 1px #9ab5ff solid ;
+        }
+        h2 {
+            margin-bottom: 1.6rem;
+        }
+        p {
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            &:not(:first-child) {
+                margin-top: 8px;
+            }
+
+            .redFont {
+                color: red;
+                font-weight: 500;
+            }
+        }
+        ol {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-left: 3rem;
+            margin-top: 8px;
+
+            li {
+                &:not(:first-child) { 
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    
+}

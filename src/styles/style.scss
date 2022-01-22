@@ -9,6 +9,7 @@ html {
     padding: 0;
     margin: 0;
 }
+.no-scroll { overflow: hidden; }
 p, ul, span, button {
     // font-size: 1.6rem;
     font-weight: 300;

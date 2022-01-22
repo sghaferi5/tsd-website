@@ -2,9 +2,10 @@ import * as React from 'react'
 import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
-import BirthDayInput from './birth-day-input'
+
 // import form components
 import FormFieldWrapper from './form-field-wrapper'
+import BirthDayInput from './birth-day-input'
 import FormLabel from './form-label'
 import FormInputText from './form-input-text.js'
 import EmailInput from './email-input'
@@ -15,7 +16,6 @@ import FormMessage from './form-message'
 import FormInputPhone from './form-input-phone'
 
 import * as styles from './make-appointment-main.module.scss'
-import { useEffect } from 'react'
 
 
 const MakeAppointmentMain = () => {
@@ -96,12 +96,6 @@ const MakeAppointmentMain = () => {
         //         errorMsg: { error: error.message }
         //     }));
     };
-
-    useEffect(() => {
-    })
-
-
-
     return (
         <div class={styles.appointmentMain}>
             <div className={styles.appointmentContent}>
@@ -109,6 +103,7 @@ const MakeAppointmentMain = () => {
                     <Container>
                         <Row>
                             <Col lg={{ span: 8, offset: 2 }}>
+                                <h1>Make an Appointment</h1>
                                 <p>
                                     To make a consultation appointment for sleep dentistry for you or your child, you can fill out this form. Once you have completed the form, please press submit. A staff member from our office will contact you within one week to schedule your appointment.
                                     (Please note that if your family dentist has referred you to our office, you do not need to fill out this form, and we will be contacting you directly to book your consultation appointment.)
@@ -121,7 +116,7 @@ const MakeAppointmentMain = () => {
                 <div class={styles.formSection}>
                     <Container>
                         <Row>
-                            <Col lg={{ span: 6, offset: 2 }}>
+                            <Col lg={{ span: 8, offset: 2 }}>
                                 <form>
                                     <Row>
                                         <FormFieldWrapper>

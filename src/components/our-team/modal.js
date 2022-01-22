@@ -34,14 +34,15 @@ const Modal = ({ showModal, setShowModal, memberInfo }) => {
     const closeModal = e => {
         if (modalRef.current === e.target || closeBtnRef.current === e.target) {
             setShowModal(false)
-            document.body.style.overflow = null
+            // document.body.style.overflow = null
+            document.documentElement.style.overflow=null
         }
     }
 
     const keyPress = useCallback(e => {
         if (e.key === 'Escape' && showModal) {
             setShowModal(false)
-            document.body.style.overflow = null
+            document.documentElement.style.overflow=null
         }
     }, [setShowModal, showModal])
 
@@ -70,19 +71,21 @@ const Modal = ({ showModal, setShowModal, memberInfo }) => {
         )
     }
 
+ 
+
 
 
     useEffect(() => {
+
         document.addEventListener('keydown', keyPress)
+        
+    
 
-        if (window.history && window.history.pushState) {
-            document.body.style.overflow = null
-        }
-
-        return () => document.removeEventListener('keydown', keyPress)
-
-    }, [keyPress]
-    )
+         document.onbeforeunload = ()=> {
+            document.documentElement.style.overflow=null
+            console.log('hello')
+         }
+    })
 
 
 

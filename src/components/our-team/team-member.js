@@ -9,7 +9,7 @@ const TeamMember = (props) => {
     const [showModal, setShowModal] = useState(false)
 
     const openModal = () => {
-        document.body.style.overflow = 'hidden'
+        document.documentElement.style.overflow='hidden'
         setShowModal(true)
     }
 
@@ -23,7 +23,9 @@ const TeamMember = (props) => {
                 showModal={showModal}
                 setShowModal={setShowModal} />
 
-            <div onClick={openModal} className={styles.memberBlock}>
+            <div 
+            onClick={openModal} 
+            className={styles.memberBlock}>
                 <TeamMemberPhoto thumbPhoto={props.thumbPhoto} />
                 <div className={styles.memberInfo}>
                     <h2>{props.name}</h2>

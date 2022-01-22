@@ -8,6 +8,8 @@ import '../styles/bootstrap-grid.min.css'
 
 
 const Layout = ({ pageTitle, children }) => {
+    document.documentElement.style.overflow=null
+
     return (
 
         <div>
