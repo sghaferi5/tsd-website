@@ -1,16 +1,12 @@
 .formSelectList {
-    ul {
-        list-style-type: none;
-
+    ul {  
         li {
-            padding: 2px;
+            padding: 2px;            
 
             label {
                 display: flex;
                 align-items: center;
-                font-size: 1.4rem;
-                font-weight: 400;
-                color: #606060;
+                color: #6c757d;
                 cursor: pointer;
 
                 input {

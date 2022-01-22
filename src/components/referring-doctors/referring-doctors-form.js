@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 
@@ -44,40 +44,40 @@ const ReferringDoctorsForm = () => {
         },
         messageOnSubmit: {}
     })
-    
+
     return (
         <div className={styles.rdForm}>
             <Container>
-                
+
                 <Row>
-                    <Col lg={{span: 8, offset: 2}}>
+                    <Col lg={{ span: 8, offset: 2 }}>
                         <Row>
                             <FormFieldWrapper>
-                            <h2>Patient Information</h2>
+                                <h2>Patient Information</h2>
                             </FormFieldWrapper>
                             {/* patient name */}
                             <FormFieldWrapper>
                                 <FormLabel
-                                required={true}
-                                for={'patientName'}>
+                                    required={true}
+                                    for={'patientName'}>
                                     Patient Name
                                 </FormLabel>
                                 <FormInputText
-                                required={true}
-                                formData={formData}
-                                setFormData={setFormData}
-                                forVal={'patientName'} />
+                                    required={true}
+                                    formData={formData}
+                                    setFormData={setFormData}
+                                    forVal={'patientName'} />
                             </FormFieldWrapper>
                             {/* birthday */}
                             <FormFieldWrapper>
-                            <FormLabel
-                                required={true}
-                                for={''}>
+                                <FormLabel
+                                    required={true}
+                                    for={''}>
                                     Patient Date of Birth
                                 </FormLabel>
-                                <BirthDayInput 
-                                formData={formData}
-                                setFormData={setFormData}/>
+                                <BirthDayInput
+                                    formData={formData}
+                                    setFormData={setFormData} />
                             </FormFieldWrapper>
                             {/* legal guardian */}
                             <FormFieldWrapper>
@@ -133,36 +133,36 @@ const ReferringDoctorsForm = () => {
                             {/* insurance */}
                             <FormFieldWrapper>
                                 <FormLabel
-                                required={true}
-                                for={''}>
+                                    required={true}
+                                    for={''}>
                                     Patient Insurance
                                 </FormLabel>
                                 <FormSelectList
-                                list={[{for: 'none', value: 'No insurance'}, 
-                                {for: 'private', value: 'Private insurance'},
-                                {for: 'healthySmiles', value: 'Healthy Smiles'},
-                                {for: 'ow', value: 'OW'},
-                                {for: 'odsp', value: 'ODSP'},
-                                {for: 'Other', value: 'Other'}]}
-                                listGroup={'patientInsurance'} 
-                                formData={formData}
-                                setFormData={setFormData}/>
+                                    list={[{ for: 'none', value: 'No insurance' },
+                                    { for: 'private', value: 'Private insurance' },
+                                    { for: 'healthySmiles', value: 'Healthy Smiles' },
+                                    { for: 'ow', value: 'OW' },
+                                    { for: 'odsp', value: 'ODSP' },
+                                    { for: 'Other', value: 'Other' }]}
+                                    listGroup={'patientInsurance'}
+                                    formData={formData}
+                                    setFormData={setFormData} />
                             </FormFieldWrapper>
                             <FormFieldWrapper>
-                            <h2>Referring Doctor Information</h2>
+                                <h2>Referring Doctor Information</h2>
                             </FormFieldWrapper>
                             {/* Referring Doctor name */}
                             <FormFieldWrapper>
                                 <FormLabel
-                                required={true}
-                                for={'doctorName'}>
+                                    required={true}
+                                    for={'doctorName'}>
                                     Referring Doctor Name
                                 </FormLabel>
                                 <FormInputText
-                                required={true}
-                                formData={formData}
-                                setFormData={setFormData}
-                                forVal={'doctorName'} />
+                                    required={true}
+                                    formData={formData}
+                                    setFormData={setFormData}
+                                    forVal={'doctorName'} />
                             </FormFieldWrapper>
                             {/* primary phone */}
                             <FormFieldWrapper>
@@ -182,7 +182,7 @@ const ReferringDoctorsForm = () => {
                                 <FormLabel
                                     required={true}
                                     for={'doctorEmail'}>
-                                   Referring Doctor Email
+                                    Referring Doctor Email
                                 </FormLabel>
                                 <EmailInput
                                     formData={formData}
@@ -191,7 +191,7 @@ const ReferringDoctorsForm = () => {
                             </FormFieldWrapper>
 
                             <FormFieldWrapper>
-                            <h2>Reason for Referral</h2>
+                                <h2>Reason for Referral</h2>
                             </FormFieldWrapper>
 
                             <FormFieldWrapper>
@@ -204,15 +204,15 @@ const ReferringDoctorsForm = () => {
                                 <h2>Radiographs</h2>
                             </FormFieldWrapper>
                             <FormFieldWrapper>
-                                <Radiographs 
+                                <Radiographs
                                     formData={formData}
                                     setFormData={setFormData} />
                             </FormFieldWrapper>
                             <Col lg={12}>
-                                            <div className={styles.referralSubmit}>
-                                                <input type="submit" value="Submit" />
-                                            </div>
-                                        </Col>
+                                <div className={styles.referralSubmit}>
+                                    <input type="submit" value="Submit" />
+                                </div>
+                            </Col>
                         </Row>
                     </Col>
                 </Row>

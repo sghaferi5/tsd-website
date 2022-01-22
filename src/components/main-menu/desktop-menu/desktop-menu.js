@@ -100,7 +100,7 @@ const DesktopMenu = () => {
                     </ul>
                 </div>
                 <div className={styles.main_nav_btn}>
-                    <Link to='/make-an-appointment'><button>Make an Appointment</button></Link>
+                    <Link to='/make-an-appointment'><button className='blueButton '>Make an Appointment</button></Link>
                 </div>
             </div>
         </header>

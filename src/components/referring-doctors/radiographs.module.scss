@@ -1,6 +1,5 @@
 .radiographsWrap {
     ul {
-        list-style-type: none;
 
         li {
             padding: 2px;
@@ -17,18 +16,6 @@
                     display: inline-block;
                     margin-right: 6px;
                 }
-            }
-
-            input[type='text'] {
-                font-size: 1.6rem;
-                display: block;
-                height: 4.2rem;
-                width: 100%;
-                padding: 1rem;
-                border: 1px #aaaaaa solid;
-                border-radius: 5px;
-                color: #606060;
-                margin-top: 8px;
             }
 
             textarea {

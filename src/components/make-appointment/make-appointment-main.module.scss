@@ -1,8 +1,7 @@
 .appointmentMain {
 
     .appointmentContent {
-        padding-top: 7rem 0;
-       
+        padding-top: 7rem 0;       
 
         .introSection {
             background-color: #1D4ED8;
@@ -15,7 +14,6 @@
             }
 
             p{
-                font-size: 1.6rem;
                 color: #ffffff;
             }
 
@@ -29,16 +27,15 @@
             input[type='submit'] {
                 cursor: pointer;
                 font-size: 1.6rem;
-                background: white;
+                background-color: white;
                 border: 1px solid #1a1a1a;
                 border-radius: 5px;
                 padding: 1.6rem 3.2rem;
-                transition: transform 0.2s ;
+                transition: background-color 0.2s ;
 
                 &:hover {
                     background-color: #1a1a1a;
                     color: white;
-                    transform: translateY(-2px);
                 }
 
             }

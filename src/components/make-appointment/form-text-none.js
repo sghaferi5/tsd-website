@@ -86,7 +86,7 @@ const FormInputNone = ({ formData, setFormData, forVal }) => {
                     id={forVal}>
                 </input >
             </div>
-            <p>
+            <p className='error-text'>
                 {newFormData.errors[forVal] ? formData.errors[forVal].message : null}
             </p>
         </div>

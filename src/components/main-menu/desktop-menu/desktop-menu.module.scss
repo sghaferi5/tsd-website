@@ -47,6 +47,7 @@ header {
                             padding: 0.8rem 1.2rem;
                             cursor: pointer;
                             border-radius: 0.4rem;
+                            font-size: 1.4rem;
                             font-weight: 400;
                             transition: background-color 0.15s linear;
 
@@ -69,7 +70,6 @@ header {
                            .aboutDropDown {
                                position: absolute;
                                display: none;
-                            //    background-color: #f5cc47;
                                padding-top: 0.8rem;
                                min-width: 25rem; 
                                
@@ -86,14 +86,14 @@ header {
 
                                    li {
                                        display: block;
-                                       padding: 0.8rem;
-                                       font-weight: 400;
+                                       padding: 0.8rem 1.2rem;
                                        border-radius: 5px;
                                        background-color: none;
+                                       font-size: 1.4rem;
                                        transition: background 0.15s linear;
-                                       &:hover {
-                                        background-color: #f2f2f2;
-                                       }
+                                            &:hover {
+                                                background-color: #f2f2f2;
+                                            }
                                    }
                                }
 
@@ -132,26 +132,15 @@ header {
                 }    
             }
 
-
-
             .main_nav_btn {
                 position: absolute;
                 right: 1.6rem;
-                
-                button {
-                    background: #1D4ED8;
-                    padding: 0.8rem 1.2rem;
-                    color: #ffffff;
-                    transition: background 0.15s linear;
 
-                    &:hover {
-                        background: #1841b2;
-                    }
+                button {
+                    font-size: 1.4rem;
                 }
             }
-        }
-
-        
+        }        
 }
 
 .hide {

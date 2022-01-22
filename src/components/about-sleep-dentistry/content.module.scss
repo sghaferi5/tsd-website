@@ -1,17 +1,11 @@
 .content section {    
     margin-bottom: 4.2rem;
-    h2 {
-        margin-bottom: 1.6rem; 
-    }
-    p {
-        &:not(:first-child) {
-            margin-top: 1.6rem;
-        }
-    }
-    p, ul {
-        color: #606060;
-        line-height: 3rem;
-    }
+    
+    
+    // p, ul {
+    //     color: #606060;
+    //     line-height: 3rem;
+    // }
 
     p > span {
         font-style: italic;
@@ -34,7 +28,6 @@
             position: absolute;
             top: 0;
             border-radius: 0.8rem;
-
         }
 
         li {
@@ -47,11 +40,7 @@
 
         }
     }
-
-    ul {
-        margin-left: 3.2rem;
-    }
-
+    
     .studies {
         margin-top: 2.4rem;
         padding: 3rem;

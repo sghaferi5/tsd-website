@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useEffect } from 'react';
 import { useRef } from 'react'
 
 import * as styles from './birth-day-input.module.scss'
@@ -112,8 +111,8 @@ const BirthDayInput = ({ formData, setFormData }) => {
                     </input >
                 </div>
             </div>
-            <div className={styles.errorMessage}>
-                <p>
+            <div>
+                <p className='error-text'>
                     {newFormData.errors['birthday'] ? formData.errors['birthday'].message : null}
                 </p>
             </div>

@@ -16,6 +16,7 @@
         
         h2 {
             margin-top: 1.2rem;
+            margin-bottom: 8px;
             @media (min-width: 992px) {
                 font-size: 1.6rem;
             }
@@ -24,10 +25,7 @@
             }
         }
         p {
-            font-size: 1.6rem;
-            font-weight: 400;
-            color: #adb5bd;
-            margin-top: 0.6rem;
+            margin-top: 0;
         }
 
         button {

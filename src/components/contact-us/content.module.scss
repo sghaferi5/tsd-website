@@ -1,11 +1,5 @@
 .contentMain {
     padding: 7.8rem 0;
-    
-    p,ul {
-        font-size: 1.6rem;
-        color: #606060;
-        line-height: 3rem;
-    }
 
     h2{
         color: #1D4ED8;
@@ -39,24 +33,18 @@
         padding: 2.2rem 0;
         text-align: center;
 
+        p {
+            margin-top: 0;
+        }
+
         // @media (min-width: 992px) {
         //     text-align: center;
         // }
         ul {
             list-style-type: none;
+            margin-left: 0;
         }
 
-        
-
-        &:first-child {
-
-            p {
-                font-size: 1.9rem;
-                color: #1a1a1a;
-            }
-
-            
-        }
         &:last-child {
             button {
                 min-width: 18.2rem;

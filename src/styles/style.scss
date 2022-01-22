@@ -10,22 +10,33 @@ html {
     margin: 0;
 }
 .no-scroll { overflow: hidden; }
-p, ul, span, button {
-    // font-size: 1.6rem;
+p, ul, span, a {
+    font-size: 1.6rem;
     font-weight: 300;
     line-height: 2.6rem;
+    color: #6c757d;
+    font-weight: 400;
 }
+ul {
+    margin-left: 3.2rem;
+}
+h1, h2, h3, h4, h5 {
+    color: #1a1a1a;
+}
+p {
+    &:not(:first-child) {
+        margin-top: 1.6rem;
+    }
+}
+
 h1{
     font-size: 3.2rem;
 }
 
 h2 {
     font-size: 2.4rem;
+    margin-bottom: 1.6rem;
     font-weight: 600;
-}
-
-h1, h2, h3, h4, h5, p, ul, button {
-    color: #1a1a1a;
 }
 
 a{
@@ -37,6 +48,17 @@ button {
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
+
+    &.blueButton {
+        background: #1D4ED8;
+        padding: 0.8rem 1.2rem;
+        color: #ffffff;
+        transition: background 0.15s linear;
+
+        &:hover {
+            background: #1841b2;
+        }
+    }
 }
 
 .pageContainer {
@@ -45,6 +67,31 @@ button {
     padding-bottom: 200px;
     position: relative;
     flex-direction: column;
-    // justify-content: space-between;
-    // background-color: rgb(207, 207, 207);
 }
+
+// FORM components
+p.error-text {
+    margin-top: 0;
+    color: red;
+    font-size: 1.4rem;
+}
+
+label {
+    color: #1a1a1a;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: inline-block;
+    line-height: 2.6rem;
+}
+
+input[type='text'] {
+    font-size: 1.6rem;
+    display: block;
+    height: 4.2rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px #aaaaaa solid;
+    border-radius: 5px;
+    color: #606060;
+} 

@@ -1,7 +1,5 @@
 .contactPreference {
     p {
-        font-size: 1.6rem;
-        font-weight: 400;
         margin-bottom: 8px;
 
         span {
@@ -9,29 +7,32 @@
             font-weight: 600;
         }
     }
-    .errorMSg {
-        color: red;
-        font-size: 1.4rem;
-        font-weight: 300;
-    }
 
-    & >  div {
+    &>div {
+        & div:not(:first-child) {
+            label {
+                margin-bottom: 0;
+            }
+        }
         label {
             font-size: 1.6rem;
             border: 1px #aaaaaa solid;
             padding: 6px 1.2rem;
-            width: 12rem;
+            width: 10rem;
             border-radius: 5px;
             display: inline-block;
-
-
-            &:first-child {
-                margin-bottom: 8px;
-            }
+            text-align: end;
+            position: relative;
+            margin-bottom: 8px;
         }
 
         input {
             margin-right: 10px;
+            display: inline-block;
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: 10px;
         }
     }
 }

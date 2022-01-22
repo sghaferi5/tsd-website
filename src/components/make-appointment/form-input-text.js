@@ -38,7 +38,7 @@ const FormInputText = ({ required, formData, setFormData, forVal }) => {
                 type='text'
                 id={forVal}>
             </input >
-            <p>
+            <p className='error-text'>
                 {newFormData.errors[forVal] ? formData.errors[forVal].message : null}
             </p>
         </div>

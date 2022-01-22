@@ -41,7 +41,7 @@ const ContactPreference = ({ formData, setFormData }) => {
                     </label>
                 </div>
             </div>
-            <p className={styles.errorMSg}>
+            <p className='error-text'>
                 {newFormData.errors['contactMethod'] ? formData.errors['contactMethod'].message : null}
             </p>
         </div>
