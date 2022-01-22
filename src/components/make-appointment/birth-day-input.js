@@ -3,7 +3,7 @@ import { useRef } from 'react'
 
 import * as styles from './birth-day-input.module.scss'
 
-const BirthDayInput = ({ formData, setFormData }) => {
+const BirthDayInput = ({ validate, formData, setFormData }) => {
 
     // new copy of current state
     let newFormData = Object.assign({}, formData);
@@ -22,7 +22,6 @@ const BirthDayInput = ({ formData, setFormData }) => {
     // focus on the next input as long as year is not active
     const focusNextInput = (event) => {
         if (event.target.dataset.spot < 2) {
-            const nextFocus = parseInt(parseInt(event.target.dataset.spot) + 1)
             if (event.target.value.length == 2) {
                 if (event.target.dataset.spot == 0) {
                     dayInput.current.focus()
@@ -60,11 +59,21 @@ const BirthDayInput = ({ formData, setFormData }) => {
         }
     }
 
+    const storeValues = (event) => {
+        newFormData.values.birthday[event.target.id] = event.target.value
+        setFormData(newFormData)
+    }
+
 
     const handleValidation = (event) => {
         combinedBirthday()
         focusNextInput(event)
-        errorCheck(event)
+        if (validate) {
+            errorCheck(event)
+        } else {
+            storeValues(event)
+        }
+        
     }
 
 

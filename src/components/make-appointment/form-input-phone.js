@@ -34,7 +34,7 @@ const FormInputPhone = ({ required, formData, setFormData, forVal }) => {
     return (
         <div className={styles.formInputText}>
             <input
-                onChange={errorCheck}
+                onChange={required ? errorCheck : storeValue}
                 type='text'
                 id={forVal}>
             </input >

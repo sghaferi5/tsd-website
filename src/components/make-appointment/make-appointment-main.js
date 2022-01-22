@@ -148,6 +148,7 @@ const MakeAppointmentMain = () => {
                                                 Patient Date of Birth
                                             </FormLabel>
                                             <BirthDayInput
+                                                validate={true}
                                                 formData={formData}
                                                 setFormData={setFormData}
                                             />
@@ -199,7 +200,8 @@ const MakeAppointmentMain = () => {
                                             <EmailInput
                                                 formData={formData}
                                                 setFormData={setFormData}
-                                                forVal={'email'} />
+                                                forVal={'email'}
+                                                required={true} />
                                         </FormFieldWrapper>
                                         <FormFieldWrapper>
                                             <ContactPreference

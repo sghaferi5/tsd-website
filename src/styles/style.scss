@@ -10,9 +10,8 @@ html {
     margin: 0;
 }
 .no-scroll { overflow: hidden; }
-p, ul, span, a {
+p, ul, ol, span {
     font-size: 1.6rem;
-    font-weight: 300;
     line-height: 2.6rem;
     color: #6c757d;
     font-weight: 400;
@@ -51,7 +50,7 @@ button {
 
     &.blueButton {
         background: #1D4ED8;
-        padding: 0.8rem 1.2rem;
+        padding: 1.2rem 1.6rem;
         color: #ffffff;
         transition: background 0.15s linear;
 

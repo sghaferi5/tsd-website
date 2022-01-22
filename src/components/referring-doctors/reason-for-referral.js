@@ -19,7 +19,6 @@ const ReasonForReferral = ({ formData, setFormData }) => {
             newFormData.values['referralReason'].val[2] = event.target.value
             setFormData(newFormData)
         }
-
     }
     const errorCheck = (event) => {
         if (event.target.value.length == 0) {

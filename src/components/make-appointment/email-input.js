@@ -31,10 +31,14 @@ const EmailInput = ({ required, formData, setFormData, forVal }) => {
         }
 
     }
+    const storeValue = (event) => {
+        newFormData.values[forVal] = { val: event.target.value, isRequired: false }
+        setFormData(newFormData)
+    }
     return (
         <div className={styles.formInputText}>
             <input
-                onChange={errorCheck}
+                onChange={required ? errorCheck : storeValue}
                 type='text'
                 id={forVal}>
             </input >
