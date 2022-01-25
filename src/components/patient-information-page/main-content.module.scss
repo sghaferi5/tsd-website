@@ -15,7 +15,7 @@
         &>div {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 1.6rem;
 
             img {
@@ -51,6 +51,19 @@
             font-size: 1.6rem;
             padding: 1.5rem 3rem;
             margin-top: 4.8rem;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        margin-top: 4.2rem;
+
+        .mMarginTop {
+            margin-top: 4.2rem;
+        }
+
+        .bottomSafety {
+            margin-top: 4.2rem;
+            padding: 3rem;
         }
     }
 }

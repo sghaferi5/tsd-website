@@ -34,7 +34,6 @@ const Modal = ({ showModal, setShowModal, memberInfo }) => {
     const closeModal = e => {
         if (modalRef.current === e.target || closeBtnRef.current === e.target) {
             setShowModal(false)
-            // document.body.style.overflow = null
             document.documentElement.style.overflow = null
         }
     }
@@ -49,7 +48,7 @@ const Modal = ({ showModal, setShowModal, memberInfo }) => {
     const outPutData = () => {
         const data = JSON.parse(memberInfo)
         return (
-            <div>
+            <div className={styles.contentWrapper}>
                 <div className={styles.headingBlock}>
                     <h1>{data.name}</h1>
                     {data.designation.map((designation) => {
@@ -62,7 +61,8 @@ const Modal = ({ showModal, setShowModal, memberInfo }) => {
                     })}
                 </div>
                 {data.bioLink ? (
-                    <p className={styles.fullBioMsg}>{data.bioLink}
+                    <p className={styles.fullBioMsg}>
+                        {data.bioLink}
                         <Link
                             onClick={() => document.body.style.overflow = null}
                             to='/our-team/meet-your-doctor'>click here</Link>.</p>
@@ -97,22 +97,20 @@ const Modal = ({ showModal, setShowModal, memberInfo }) => {
                         <animated.div style={animateContent}>
                             <div className={styles.modalContent}>
                                 <Container>
-                                    <Row>
-                                        <Col>
-                                            <div className={styles.closeBtn}>
-                                                <img src={Close} ref={closeBtnRef} />
-                                            </div>
-                                        </Col>
-                                    </Row>
+                                    {/* <Row> */}
+                                    {/* <Col> */}
+                                    <div className={styles.closeBtn}>
+                                        <img src={Close} ref={closeBtnRef} />
+                                    </div>
+                                    {/* </Col> */}
+                                    {/* </Row> */}
                                     <Row>
                                         <Col md={{ span: 4 }}>
                                             <div className={styles.photoWrap}>
                                                 <StaticImage src="../../images/our-team-doctor.jpg" alt="" />
                                             </div>
                                         </Col>
-                                        <Col style={{
-                                            padding: '0 3.2rem'
-                                        }}>
+                                        <Col>
                                             {outPutData()}
                                         </Col>
                                     </Row>

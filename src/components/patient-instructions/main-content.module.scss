@@ -5,6 +5,10 @@
     }
     .btmSection {
         margin: 7rem 0;
+
+        a {
+            font-size: 1.6rem;
+        }
     }
     .btmSectionBlock {
         padding: 7.2rem 0;
@@ -30,5 +34,17 @@
                 }
             }
         
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        margin-top: 4.2rem;
+
+        .mainTop {
+            margin-top: 0;
+        }
+
+        .btmSection {
+            margin: 4.2rem 0;
+        }
     }
 }

@@ -18,12 +18,12 @@ const MainContent = () => {
                     </Col>
                 </Row>
                 <Row className={styles.btmSection}>
-                    <Col md={{ span: 4, offset: 2 }} className={styles.btmSectionBlock}>
+                    <Col md={{ span: 6 }} className={styles.btmSectionBlock}>
                         <h2>Children's Instructions</h2>
                         <Link to='/patient-instructions/pre-operative-instructions–pediatric-patients'>Before your appointment</Link>
                         <Link to='/patient-instructions/post-operative-instructions–pediatric-patients'>Following your appointment</Link>
                     </Col>
-                    <Col md={{ span: 4 }} className={styles.btmSectionBlock}>
+                    <Col md={{ span: 6 }} className={styles.btmSectionBlock}>
                         <h2>Adult Instructions</h2>
                         <Link to='/patient-instructions/pre-operative-instructions–adult-patients'>Before your appointment</Link>
                         <Link to='/patient-instructions/post-operative-instructions–adult-patients'>Following your appointment</Link>

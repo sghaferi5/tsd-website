@@ -8,10 +8,12 @@ const DoctorMeet = () => {
         <div className={styles.DoctorMain}>
             <Container className={styles.border}>
                 <Row>
-                    <Col>
+                    <Col sm={12} md={12} lg={6}>
                         <div className={styles.info}>
                             <div className={styles.meetHeading}>Meet Your Doctor</div>
-                            <StaticImage src="../../images/full-bio-photo.jpg" alt="" />
+                            <div className={styles.bioPhoto}>
+                                <StaticImage src="../../images/full-bio-photo.jpg" alt="" />
+                            </div>
                             <h1>Dr. Soheil Khojasteh</h1>
                             <p>BHSc, DDS, MSc, Diplomate ADBA</p>
                             <p>Specialist in Dental Anaesthesiology</p>
@@ -20,7 +22,7 @@ const DoctorMeet = () => {
 
                     </Col>
 
-                    <Col>
+                    <Col sm={12} md={12} lg={6}>
                         <div className={styles.bioBody}>
                             <p>My goal is to provide you with safe, comfortable, and quality dental treatment. I believe that a healthy mouth is
                                 fundamental to overall health, and a beautiful smile will help make you feel your best. I understand that many people

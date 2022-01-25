@@ -22,7 +22,9 @@ const MainContent = () => {
                     <Row>
                         <Col>
                             <Row className={styles.colLineDivider}>
-                                <Col className={styles.colPadded}>
+                                <Col
+                                    sm={12}
+                                    className={styles.colPadded}>
                                     <div>
                                         <img src={referringDocIcon} />
                                         <h2>Working with your referring doctor</h2>
@@ -31,7 +33,9 @@ const MainContent = () => {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className={`${styles.colPadded} ${styles.colTopMargin}`}>
+                                <Col
+                                    sm={12}
+                                    className={`${styles.colPadded} ${styles.colTopMargin}`}>
                                     <div>
                                         <img src={xrayIcon} />
                                         <h2>X-Rays</h2>
@@ -40,7 +44,10 @@ const MainContent = () => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className={styles.colPadded}>
+                        <Col
+                            sm={12}
+                            md={6}
+                            className={`${styles.colPadded} ${styles.mMarginTop}`}>
                             <div>
                                 <img src={schedulingIcon} />
                                 <h2>Scheduling</h2>
@@ -51,14 +58,20 @@ const MainContent = () => {
                     </Row>
                 </div>
                 <Row>
-                    <Col className={styles.colPadded}>
+                    <Col
+                        sm={12}
+                        md={6}
+                        className={styles.colPadded}>
                         <div>
                             <img src={walletIcon} />
                             <h2>Financial Information</h2>
                         </div>
                         <p>Our office follows the fee guide of the Ontario Dental Association for Specialists, meaning we offer exceptional treatment at reasonable prices set by the Ontario Dental Association. We accept all payment methods except for personal cheques. The payment methods we accept are Visa, Mastercard, American Express, Cash, or Debit. Full payment is due at the end of your dental appointment.</p>
                     </Col>
-                    <Col className={styles.colPadded}>
+                    <Col
+                        sm={12}
+                        md={6}
+                        className={`${styles.colPadded} ${styles.mMarginTop}`}>
                         <div>
                             <img src={lockIcon} />
                             <h2>Patient Privacy</h2>
@@ -72,7 +85,7 @@ const MainContent = () => {
             <div className={styles.bottomSafety}>
                 <Container>
                     <Row>
-                        <Col md={{ span: 8, offset: 2 }}>
+                        <Col lg={{ span: 8, offset: 2 }} md={12}>
                             <h2>Patient Safety</h2>
                             <p>Sleep Dentistry is a very safe and low risk procedure. Please visit our “About Sleep Dentistry” page and read the entire section on the safety profile of sleep dentistry by <Link to='/about-sleep-dentistry'>clicking here</Link>.</p>
                             <Link to='/make-an-appointment'><button>Make An Appointment</button></Link>

@@ -1,5 +1,5 @@
 .heroSectionBlock {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .hero {
     width: 100%;
@@ -7,30 +7,63 @@
     min-height: 50rem;
     background-color: rgba(0, 0, 0, 0.4); /* Tint color */
     font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
         h1, h2, p, ul {
             color: #ffffff;
+        }
+        h1.mobileHeading {
+            display: none;
+            @media only screen and (max-width: 575.98px) {
+                display: block;
+                font-size: 12vw;
+                margin-bottom: 2rem;
+                line-height: 12vw;
+            }
+            
+        }
+        h1.mediumHeading {
+            display: none;
+            @media only screen and (min-width: 575.99px) and (max-width: 991.98px) { 
+                display: block;
+                font-size: 6.6vw;
+                line-height: 6.6vw;
+            }
+            
         }
         h1 {
             font-size: 7rem;
             margin-top: 0;
             margin-bottom: 2rem;
-            letter-spacing: 0.4rem;
-            line-height: 8rem;
-
-            // @media (min-width: 1200px) and (max-width: 1399.9px) {
-            //     font-size: 6rem;
-            // }
-
+            letter-spacing: 0.16rem;
+            line-height: 7rem;
             
+            @media only screen and (max-width: 991.98px) {
+                display: none;
+            }
         }
         ul {
-            margin: none;
+            margin-left: 0;
 
             li {
                 display: inline-block;
 
+                @media only screen and (max-width: 575.98px) {
+                    display: block;
+                    padding: 0.6rem 0;
+                }
+                @media only screen and (min-width: 575.99px) and (max-width: 991.98px) { 
+                    display: block;
+                    padding: 0.6rem 0;
+                }
+
                 &:not(:last-child) {
                     margin-right: 3rem;
+                    @media only screen and (max-width: 575.98px) {
+                        margin-right: 0;
+                    }
+
                 }
 
                 &>div {
@@ -53,17 +86,35 @@
         }
         .actionBtn {
             li {
+                @media only screen and (min-width: 575.99px) and (max-width: 991.98px) { 
+                    display: inline-block;
+                }
                 button {
                     margin-top: 7.2rem;
                     padding: 0.6rem 1.2rem;
                     border: 1px #ffffff solid;
                     color: #ffffff;
                     padding: 1.5rem 3rem;
+                    min-width: 22.7rem;
+
+                    @media only screen and (max-width: 575.98px) {
+                        margin-top: 0.8rem;
+                    }
+                    @media only screen and (min-width: 575.99px) and (max-width: 991.98px) { 
+                        margin-top: 0.8rem;
+                    }
+                    
                 }
 
                 &:first-child button {
                     background-color: #ffffff;
                     color: #1a1a1a;
+                    @media only screen and (max-width: 575.98px) {
+                        margin-top: 3.2rem;
+                    }
+                    @media only screen and (min-width: 575.99px) and (max-width: 991.98px) { 
+                        margin-top: 3.2rem;
+                    }
                 }
             }
             

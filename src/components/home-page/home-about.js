@@ -18,7 +18,7 @@ const HomeAbout = () => {
         <div className={styles.homeAbout}>
             <Container>
                 <Row>
-                    <Col md={{ span: 8, offset: 2 }}>
+                    <Col lg={{ span: 8, offset: 2 }}>
                         <h2>About Us</h2>
                         <p>
                             At Toronto Sleep Dentistry, we offer dental treatment under all modalities of sedation, including general anaesthesia. We are specialists in dental anaesthesia, and we treat patients of all ages and we offer a variety of dental procedures to our patients while they are sedated and relaxed or completely ASLEEP! Learn more <Link to="about-sleep-dentistry">here</Link>

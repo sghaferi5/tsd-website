@@ -13,12 +13,8 @@ const MainContent = () => {
             <div className={styles.mainContent}>
                 <Container>
                     <Row>
-                        <Col md={3}>
-                            <TableOfContents />
-                        </Col>
-                        <Col style={{
-                            paddingLeft: '2.4rem'
-                        }}>
+                        <TableOfContents />
+                        <Col>
                             <Content />
                         </Col>
                     </Row>

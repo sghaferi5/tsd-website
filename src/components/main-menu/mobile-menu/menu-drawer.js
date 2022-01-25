@@ -26,7 +26,7 @@ const MenuDrawer = ({ menu, setMenu }) => {
 
     const dropDownAnimation = useSpring({
         config: {
-            duration: 500
+            duration: 150
         },
         maxHeight: menu.showSubMenu ? `120px` : `0`,
         overflow: menu.showSubMenu ? 'hidden' : 'hidden'

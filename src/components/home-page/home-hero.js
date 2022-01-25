@@ -42,7 +42,9 @@ const MainHero = () => {
                 <Container >
                     <Row>
                         <Col>
-                            <h1>Specialists In <br />Dental Anaesthesia</h1>
+                            <h1 className={styles.largeHeading}>Specialists In <br />Dental Anaesthesia</h1>
+                            <h1 className={styles.mediumHeading}>Specialists In <br />Dental Anaesthesia</h1>
+                            <h1 className={styles.mobileHeading}>Specialists <br />In Dental <br />Anaesthesia</h1>
                             <ul>
                                 <li>
                                     <div>

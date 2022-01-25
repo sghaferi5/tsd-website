@@ -13,26 +13,26 @@ const OurTeamMain = () => {
             <div className={styles.ourteamMain}>
                 <Container>
                     <Row>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.doctor.name}
                                 info={Members.doctor}
                                 thumbPhoto={Members.doctor.photo}
                             />
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.nurse.name}
                                 info={Members.nurse}
                             />
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.nurse.name}
                                 info={Members.nurse}
                             />
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.nurse.name}
                                 info={Members.nurse}

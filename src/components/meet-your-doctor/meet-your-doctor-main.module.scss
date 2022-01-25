@@ -46,4 +46,36 @@
     .bioBody {
         padding: 3.2rem 1.8rem;
     }
+
+        @media only screen and (max-width: 991.98px) {
+            .info {
+                top: 70px;
+                min-height: auto;
+                padding: 2.4rem;
+                margin-top: 0.8rem;
+                background-color: transparent;
+                border-bottom: 1px solid #e9ecef;
+
+                .meetHeading {
+                    margin-bottom: 1.2rem;
+                }
+                .bioPhoto {
+                    max-width: 40rem;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 40rem;
+                }
+            }
+
+            
+
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                margin-top: 0;
+            }
+        }
 }
