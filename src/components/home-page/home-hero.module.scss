@@ -10,6 +10,62 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+
+    @media only screen and (max-width: 575.98px) {
+        justify-content: flex-start;
+        padding-top: 1.6rem;
+
+        .customContainer {
+            padding-right: 0;
+            padding-left: 0;
+            height: 100%;
+
+            .containerWrap {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .actionBtn {
+                    padding-bottom: 2.8rem;
+                    margin-top: auto;
+
+                    li {
+                        text-align: center;
+                    }
+
+                    button {
+                        margin-top: 0;
+                        width: 95%;
+                    }
+                    
+                }
+            }
+
+            h2 {
+                padding-left: 0.8rem;
+                font-size: 2rem;
+            }
+
+            
+        }
+
+        ul.heroInfo { 
+            line-height: auto;
+            
+            li {
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 1.6rem;
+                padding-right: 0.8rem;
+                padding-left: 0.8rem;
+
+                &:not(:first-child) {
+                    margin-top: 1.2rem;
+                }
+            }
+        }
+    }
+
         h1, h2, p, ul {
             color: #ffffff;
         }
@@ -18,8 +74,9 @@
             @media only screen and (max-width: 575.98px) {
                 display: block;
                 font-size: 12vw;
-                margin-bottom: 2rem;
+                // margin-bottom: 2rem;
                 line-height: 12vw;
+                padding: 0 0.8rem;
             }
             
         }
@@ -35,13 +92,22 @@
         h1 {
             font-size: 7rem;
             margin-top: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 0.8rem;
             letter-spacing: 0.16rem;
             line-height: 7rem;
+            // background: -webkit-linear-gradient(left, #fbd07c, #f7f779);
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
             
             @media only screen and (max-width: 991.98px) {
                 display: none;
             }
+        }
+        h2 {
+            display: inline-block;
+            background: -webkit-linear-gradient(left, #fbd07c, #f7f779);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         ul {
             margin-left: 0;

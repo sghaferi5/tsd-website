@@ -11,6 +11,15 @@
             margin-top: 0;
             margin-bottom: 1.6rem;
         }
+
+        h2 {
+            font-size: 1.8rem;
+            background-color: #ffccd5;
+            padding: 1.2rem 1.6rem;
+            border-radius: 5px;
+            color: #800f2f;
+            display: inline-block;
+        }
         
     }
 
@@ -18,7 +27,7 @@
         &:not(:last-child) {
             padding-bottom: 1.6rem;
             margin-bottom: 2.4rem;
-            border-bottom: 1px #9ab5ff solid ;
+            border-bottom: 1px #e9ecef solid;
         }
         h2 {
             margin-bottom: 1.6rem;
@@ -33,6 +42,25 @@
             }
 
         }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        .headlineSection {
+            padding: 3.2rem 0;
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+                background-color: #ffccd5;
+                padding: 1.2rem;
+                border-radius: 5px;
+                color: #800f2f;
+            }
+            
+        }
+        
+
     }
     
 }

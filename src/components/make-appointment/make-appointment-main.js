@@ -245,7 +245,7 @@ const MakeAppointmentMain = () => {
                                             <FormLabel
                                                 required={false}
                                                 for={'comments'}>
-                                                Please briefly tell us why you or your childrequire sedation or general anaesthesia for dental treatment.
+                                                Please briefly tell us why you or your child require sedation or general anaesthesia for dental treatment.
                                             </FormLabel>
                                             <OtherComments
                                                 formData={formData}

@@ -1,5 +1,7 @@
 .appointmentMain {
 
+    
+
     .appointmentContent {
         padding-top: 7rem 0;       
 
@@ -43,6 +45,20 @@
         }
 
         
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        .appointmentContent {
+            .introSection {
+                padding: 1.6rem;
+                padding-bottom: 4.4rem;
+            }
+
+            .formSection {
+                padding: 4.2rem 0;
+            }
+        }
+
     }
 
     

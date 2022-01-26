@@ -20,9 +20,6 @@ const OtherComments = ({ formData, setFormData }) => {
                 onChange={storeValue}
                 id='otherComments'
                 name='forVal' ></textarea>
-            <p>
-                {/* {newFormData.errors[forVal] ? formData.errors[forVal].message : null} */}
-            </p>
         </div>
     )
 
