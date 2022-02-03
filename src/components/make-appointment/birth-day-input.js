@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 
 import * as styles from './birth-day-input.module.scss'
 
 const BirthDayInput = ({ validate, formData, setFormData }) => {
+
 
     // new copy of current state
     let newFormData = Object.assign({}, formData);
@@ -11,6 +12,13 @@ const BirthDayInput = ({ validate, formData, setFormData }) => {
     const monthInput = useRef()
     const dayInput = useRef()
     const yearInput = useRef()
+
+    useEffect(() => {
+        monthInput.current.value = monthInput.current.value
+        dayInput.current.value = dayInput.current.value
+        yearInput.current.value = yearInput.current.value
+    })
+
 
     // combine birthday dates
     let datesCombined = ''
@@ -73,7 +81,7 @@ const BirthDayInput = ({ validate, formData, setFormData }) => {
         } else {
             storeValues(event)
         }
-        
+
     }
 
 

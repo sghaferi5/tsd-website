@@ -1,12 +1,17 @@
 .formMessage {
-    .errorMessage {
+    .message {
         font-size: 1.5rem;
         font-weight: 400;
-        background-color: #ffccd5;
-        color: #800f2f;
         padding: 3rem;
         border-radius: 5px;
-        // transition: transform 0.25s ease-in;
-        
+    }
+    .errorMessage {  
+        background-color: #ffccd5;
+        color: #800f2f;
+    }
+
+    .successMessage {
+        background-color: #ECF4F0;
+        color: #167835;
     }
 }

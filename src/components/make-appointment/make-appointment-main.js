@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 
@@ -20,7 +20,9 @@ import * as styles from './make-appointment-main.module.scss'
 
 const MakeAppointmentMain = () => {
 
-    const API_PATH = 'http://localhost:8888/api/contact/index.php'
+    const API_PATH = 'http://shiftcook.com/api/make-appointment.php'
+    // const API_PATH = 'http://localhost:8888/api/contact/index.php'
+    const spinner = useRef()
 
     const [formData, setFormData] = useState({
         errors: {
@@ -45,56 +47,123 @@ const MakeAppointmentMain = () => {
     let newFormData = Object.assign({}, formData);
 
     const errorCheck = () => {
+        var datesMissing = 0
         Object.entries(formData.values).forEach(entry => {
             const [key, value] = entry;
-            if (key != 'birthday') {
-                if (value.val == '' && value.isRequired)
+            if (key !== 'birthday') {
+                if (value.val === '' && value.isRequired)
                     newFormData.errors[key] = { message: 'This field is required', type: 'required' }
                 newFormData.messageOnSubmit = { message: 'Error: Some fields are empty.', isError: 'true' }
                 setFormData(newFormData)
-            } else if (key === 'birthday') {
-                var datesMissing = 0
-                Object.entries(formData.values.birthday).forEach(dateValue => {
-                    const [key, value] = dateValue;
-                    if (value == '') {
-                        datesMissing += 1
-                    }
-                })
+            }
+        })
 
-                if (datesMissing === 3) {
-                    newFormData.errors['birthday'] = { message: 'This field is required', type: 'required' }
-                    newFormData.messageOnSubmit = { message: 'Error: Some fields are empty.', isError: 'true' }
-                    setFormData(newFormData)
+        var datesMissing
+
+        Object.entries(formData.values.birthday).forEach(dateValue => {
+            const [key, value] = dateValue;
+            if (key != 'isRequired') {
+                if (value == '') {
+                    datesMissing += 1
                 }
             }
-        });
+        })
+        if (datesMissing > 2) {
+            newFormData.errors['birthday'] = { message: 'This field is required', type: 'required' }
+            newFormData.messageOnSubmit = { message: 'Error: Some fields are empty.', isError: 'true' }
+            setFormData(newFormData)
+        }
+        if (Object.keys(formData.errors).length == 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+
+    //RESET FORM VALUES AND STATE
+    const resetFormValues = (e) => {
+        e.target.reset()
+        document.querySelectorAll("input").forEach(element => {
+            if (element.type == 'text') {
+                element.value = ''
+            } else if (element.type == 'checkbox' || element.type == 'radio') {
+                element.checked = false
+            }
+        })
+
     }
 
     const handleFormSubmit = e => {
         e.preventDefault();
-        errorCheck()
+        document.getElementById('submitBtn').disabled = true
+        spinner.current.style.display = 'inline-block'
+        if (errorCheck()) {
+            spinner.current.style.display = 'none'
+            document.getElementById('submitBtn').disabled = false
 
+        } else {
+            axios({
+                method: 'POST',
+                url: `${API_PATH}`,
+                headers: { 'content-type': 'application/json' },
+                data: formData.values
+            })
+                .then(result => {
+                    console.log(result.data[0].some)
+                    resetFormValues(e)
+                    spinner.current.style.display = 'none'
+                    document.getElementById('submitBtn').disabled = false
 
+                    setFormData({
+                        errors: {
+                        },
+                        values: {
+                            firstName: { val: '', isRequired: true },
+                            lastName: { val: '', isRequired: true },
+                            birthday: { bdDay: '', bdMonth: '', bdYear: '', isRequired: true },
+                            legalGuardian: { val: '', isRequired: false },
+                            primaryPhone: { val: '', isRequired: true },
+                            altPhone: { val: '', isRequired: false },
+                            email: { val: '', isRequired: true },
+                            contactMethod: { val: '', isRequired: true },
+                            medConditions: { val: '', isRequired: true },
+                            medications: { val: '', isRequired: true },
+                            allergies: { val: '', isRequired: true },
+                            otherComments: { val: '', isRequired: false }
+                        },
+                        messageOnSubmit: {},
+                        mailSent: result.data[0].sent
+                    })
+                })
+                .catch(error => {
+                    document.getElementById('submitBtn').disabled = false
+                    spinner.current.style.display = 'none'
+                    setFormData(
+                        {
+                            errors: {
+                            },
+                            values: {
+                                firstName: { val: '', isRequired: true },
+                                lastName: { val: '', isRequired: true },
+                                birthday: { bdDay: '', bdMonth: '', bdYear: '', isRequired: true },
+                                legalGuardian: { val: '', isRequired: false },
+                                primaryPhone: { val: '', isRequired: true },
+                                altPhone: { val: '', isRequired: false },
+                                email: { val: '', isRequired: true },
+                                contactMethod: { val: '', isRequired: true },
+                                medConditions: { val: '', isRequired: true },
+                                medications: { val: '', isRequired: true },
+                                allergies: { val: '', isRequired: true },
+                                otherComments: { val: '', isRequired: false }
+                            },
+                            messageOnSubmit: {},
+                            mailSent: error.sent,
+                            errorMsg: { error: error.message }
+                        }
+                    )
+                })
+        }
 
-        // axios({
-        //     method: 'POST',
-        //     url: `${API_PATH}`,
-        //     headers: { 'content-type': 'application/json' },
-        //     data: formData.values
-        // })
-        //     .then(result => {
-        //         setFormData({
-        //             errors: {},
-        //             values: { firstName: '', lastName: '' },
-        //             mailSent: result.data.sent
-        //         })
-        //     })
-        //     .catch(error => setFormData({
-        //         errors: {},
-        //         values: { firstName: '', lastName: '' },
-        //         mailSent: error.sent,
-        //         errorMsg: { error: error.message }
-        //     }));
     };
     return (
         <div class={styles.appointmentMain}>
@@ -117,7 +186,7 @@ const MakeAppointmentMain = () => {
                     <Container>
                         <Row>
                             <Col lg={{ span: 8, offset: 2 }}>
-                                <form>
+                                <form onSubmit={e => handleFormSubmit(e)}>
                                     <Row>
                                         <FormFieldWrapper>
                                             <FormLabel required={true}
@@ -255,16 +324,18 @@ const MakeAppointmentMain = () => {
                                             <FormMessage formData={formData} />
                                         </FormFieldWrapper>
                                         <Col lg={12}>
-                                            <div className={styles.appointmentSubmit}>
-                                                <input type="submit" onClick={e => handleFormSubmit(e)} value="Submit" />
+                                            <div className={styles.submitWrapper}>
+                                                <div className={styles.referralSubmit}>
+                                                    <input
+                                                        type="submit"
+                                                        value="Submit"
+                                                        id="submitBtn" />
+
+                                                    <svg ref={spinner} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 2a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 1-1zm10-5a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1zM7 12a1 1 0 0 1-1 1H3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1zm12.071 7.071a1 1 0 0 1-1.414 0l-2.121-2.121a1 1 0 0 1 1.414-1.414l2.121 2.12a1 1 0 0 1 0 1.415zM8.464 8.464a1 1 0 0 1-1.414 0L4.93 6.344a1 1 0 0 1 1.414-1.415L8.464 7.05a1 1 0 0 1 0 1.414zM4.93 19.071a1 1 0 0 1 0-1.414l2.121-2.121a1 1 0 1 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0zM15.536 8.464a1 1 0 0 1 0-1.414l2.12-2.121a1 1 0 0 1 1.415 1.414L16.95 8.464a1 1 0 0 1-1.414 0z" /></svg>
+                                                </div>
                                             </div>
                                         </Col>
                                     </Row>
-                                    <div>
-                                        {formData.mailSent &&
-                                            <div>Thank you for contcting us.</div>
-                                        }
-                                    </div>
                                 </form>
                             </Col>
                         </Row>

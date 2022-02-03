@@ -13,7 +13,6 @@ const FormInputNone = ({ formData, setFormData, forVal }) => {
 
     const checkNone = (event) => {
         if (event.target.checked) {
-            console.log(event)
             inputText.current.disabled = true
             // delete any errors
             delete newFormData.errors[forVal]

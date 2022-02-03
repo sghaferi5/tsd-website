@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 import * as styles from './reason-for-referral.module.scss'
 
@@ -13,33 +13,35 @@ const ReasonForReferral = ({ formData, setFormData }) => {
 
     const storeTextBoxValue = (event) => {
         if (event.target.value.length === 0) {
-            newFormData.values['referralReason'].val[2] = undefined
+            delete newFormData.values['referralReason'].val[event.target.id]
+
             setFormData(newFormData)
         } else if (event.target.value.length > 0) {
-            newFormData.values['referralReason'].val[2] = event.target.value
+            newFormData.values['referralReason'].val[event.target.id] = event.target.value
+
             setFormData(newFormData)
         }
     }
     const errorCheck = (event) => {
         if (event.target.value.length == 0) {
-            newFormData.errors['referralReason'] = { type: 'required', message: 'This field is required' }
-            newFormData.values['referralReason'].val[1] = event.target.value
+            newFormData.values['referralReason'].val[event.target.id] = event.target.value
+
             setFormData(newFormData)
         } else if (event.target.value.length > 0) {
-            delete newFormData.errors['referralReason']
-            newFormData.values['referralReason'].val[1] = event.target.value
+            newFormData.values['referralReason'].val[event.target.id] = event.target.value
+
             setFormData(newFormData)
         }
     }
 
-    const checkBoxErrorUpdate = () => {
+    const checkBoxErrorUpdate = (event) => {
         if (treatmentNotesInput.current.value.length == 0) {
-            newFormData.errors['referralReason'] = { type: 'required', message: 'This field is required' }
-            newFormData.values['referralReason'].val[1] = treatmentNotesInput.current.value
+            newFormData.values['referralReason'].val[event.target.id] = treatmentNotesInput.current.value
+
             setFormData(newFormData)
         } else if (treatmentNotesInput.current.value.length > 0) {
-            delete newFormData.errors['referralReason']
-            newFormData.values['referralReason'].val[1] = treatmentNotesInput.current.value
+            newFormData.values['referralReason'].val[event.target.id] = treatmentNotesInput.current.value
+
             setFormData(newFormData)
         }
     }
@@ -50,15 +52,14 @@ const ReasonForReferral = ({ formData, setFormData }) => {
             if (event.target.id == 'treatment') {
                 treatmentNotesInput.current.disabled = false
                 treatmentNotesInput.current.focus()
-                checkBoxErrorUpdate()
+                // checkBoxErrorUpdate(event)
             } else if (event.target.id == 'completeAssessment') {
-                newFormData.values['referralReason'].val[0] = event.target.value
+                newFormData.values['referralReason'].val[event.target.id] = event.target.value
+
                 setFormData(newFormData)
             }
 
             if (assessmentCheck.current.checked && !treatmentCheck.current.checked) {
-                delete newFormData.errors['referralReason']
-                console.log('test')
                 setFormData(newFormData)
             }
 
@@ -68,11 +69,10 @@ const ReasonForReferral = ({ formData, setFormData }) => {
 
             if (event.target.id == 'treatment') {
                 treatmentNotesInput.current.disabled = true
-                delete newFormData.errors['referralReason']
-                newFormData.values['referralReason'].val[1] = undefined
+                delete newFormData.values['referralReason'].val['treatmentNotes']
                 setFormData(newFormData)
             } else if (event.target.id == 'completeAssessment') {
-                newFormData.values['referralReason'].val[0] = undefined
+                delete newFormData.values['referralReason'].val[event.target.id]
                 setFormData(newFormData)
             }
 

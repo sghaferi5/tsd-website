@@ -5,7 +5,6 @@ const ContactPreference = ({ formData, setFormData }) => {
     let newFormData = Object.assign({}, formData);
 
     const storeValue = (event) => {
-        console.log(event.target.value)
         newFormData.values.contactMethod = { val: event.target.value, isRequired: true }
         delete newFormData.errors.contactMethod
 

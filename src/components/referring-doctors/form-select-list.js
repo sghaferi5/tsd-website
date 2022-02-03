@@ -1,13 +1,20 @@
 import * as React from 'react'
+import { useEffect } from 'react'
 
 import * as styles from './form-select-list.module.scss'
 
 const FormSelectList = ({ list, listGroup, formData, setFormData }) => {
 
+
     let newFormData = Object.assign({}, formData);
+
+    useEffect(() => {
+
+    })
 
 
     const updateSelected = (event) => {
+
 
         if (event.target.checked) {
             newFormData.values[listGroup].val.push(event.target.value)
@@ -29,7 +36,7 @@ const FormSelectList = ({ list, listGroup, formData, setFormData }) => {
                             htmlFor={item.for}>
                             <input
                                 type="checkbox"
-                                name=""
+                                name={item.for}
                                 id={item.for}
                                 value={item.value}
                                 onChange={updateSelected} />

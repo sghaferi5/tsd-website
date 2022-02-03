@@ -1,16 +1,20 @@
 import * as React from 'react'
+import { useRef, useEffect } from 'react'
 import * as styles from './form-input-text.module.scss'
 
 const FormInputPhone = ({ required, formData, setFormData, forVal }) => {
+
+    const inputPoint = useRef()
+    useEffect(() => {
+        inputPoint.current.value = inputPoint.current.value
+    })
 
     let newFormData = Object.assign({}, formData);
     var phoneNumberValidate = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
 
-
-
     const storeValue = (event) => {
-        newFormData.values[forVal] = event.target.value
+        newFormData.values[forVal] = { val: event.target.value }
         setFormData(newFormData)
     }
 
@@ -36,7 +40,9 @@ const FormInputPhone = ({ required, formData, setFormData, forVal }) => {
             <input
                 onChange={required ? errorCheck : storeValue}
                 type='text'
-                id={forVal}>
+                id={forVal}
+                name={forVal}
+                ref={inputPoint}>
             </input >
             <p className='error-text'>
                 {newFormData.errors[forVal] ? formData.errors[forVal].message : null}

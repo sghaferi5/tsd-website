@@ -1,7 +1,12 @@
 import * as React from 'react'
+import { useRef, useEffect } from 'react'
 import * as styles from './form-input-text.module.scss'
 
 const EmailInput = ({ required, formData, setFormData, forVal }) => {
+    const inputPoint = useRef()
+    useEffect(() => {
+        inputPoint.current.value = inputPoint.current.value
+    })
 
     let newFormData = Object.assign({}, formData);
 
@@ -40,7 +45,9 @@ const EmailInput = ({ required, formData, setFormData, forVal }) => {
             <input
                 onChange={required ? errorCheck : storeValue}
                 type='text'
-                id={forVal}>
+                id={forVal}
+                name={forVal}
+                ref={inputPoint}>
             </input >
             <p className='error-text'>
                 {newFormData.errors[forVal] ? formData.errors[forVal].message : null}

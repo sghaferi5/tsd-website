@@ -1,8 +1,21 @@
 .rdForm {
     padding: 7rem 0;
+    .submitWrapper {
+        display: inline-block;
+    }
     .referralSubmit {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        svg {
+            position: absolute;
+            display: none;
+            right: -4.2rem;
+            animation: spin 2s linear 0s infinite normal;
+        }
+
         input[type='submit'] {
-            margin-top: 3rem;
             cursor: pointer;
             color: #1a1a1a;
             font-size: 1.6rem;
@@ -31,4 +44,29 @@
     @media only screen and (max-width: 575.98px) {
         padding: 4.2rem 0;
     }
+
+    .submitSuccess {
+        padding: 2.4rem;
+        background-color: #ECF4F0;
+        color: #167835;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .submitFail {
+        padding: 2.4rem;
+        background-color: #ffccd5;
+        color: #800f2f;
+        border-radius: 5px;
+    }
 }
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(360deg )
+    }
+  }
+
