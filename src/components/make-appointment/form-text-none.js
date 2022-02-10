@@ -6,7 +6,7 @@ const FormInputNone = ({ formData, setFormData, forVal }) => {
 
     const inputText = useRef()
     let newFormData = Object.assign({}, formData);
-    var letters = /^[A-Za-z\s]*$/;
+    // var letters = /^[A-Za-z\s]*$/;
 
 
 
@@ -40,11 +40,7 @@ const FormInputNone = ({ formData, setFormData, forVal }) => {
             newFormData.errors[forVal] = { type: 'required', message: 'This field is required' }
             newFormData.values[forVal] = { val: el.current.value, isRequired: true }
             setFormData(newFormData)
-        } else if (!el.current.value.match(letters) && el.current.value.length > 0) {
-            newFormData.errors[forVal] = { type: 'pattern', message: 'Can only contain letters.' }
-            newFormData.values[forVal] = { val: el.current.value, isRequired: true }
-            setFormData(newFormData)
-        } else if (el.current.value.match(letters) && el.current.value.length > 0) {
+        } else if (el.current.value.length > 0) {
             delete newFormData.errors[forVal]
             newFormData.values[forVal] = { val: el.current.value, isRequired: true }
             setFormData(newFormData)
@@ -58,11 +54,7 @@ const FormInputNone = ({ formData, setFormData, forVal }) => {
             newFormData.errors[forVal] = { type: 'required', message: 'This field is required' }
             newFormData.values[forVal] = { val: event.target.value, isRequired: true }
             setFormData(newFormData)
-        } else if (!event.target.value.match(letters) && event.target.value.length > 0) {
-            newFormData.errors[forVal] = { type: 'pattern', message: 'Can only contain letters.' }
-            newFormData.values[forVal] = { val: event.target.value, isRequired: true }
-            setFormData(newFormData)
-        } else if (event.target.value.match(letters) && event.target.value.length > 0) {
+        } else if (event.target.value.length > 0) {
             delete newFormData.errors[forVal]
             newFormData.values[forVal] = { val: event.target.value, isRequired: true }
             setFormData(newFormData)

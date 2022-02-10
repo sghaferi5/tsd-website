@@ -8,10 +8,7 @@ const FormInputText = ({ required, formData, setFormData, forVal }) => {
     useEffect(() => {
         inputPoint.current.value = inputPoint.current.value
     })
-
-
-
-    var letters = /^[A-Za-z\s]*$/;
+    // var letters = /^[A-Za-z\s]*$/;
 
 
     const storeValue = (event) => {
@@ -25,11 +22,7 @@ const FormInputText = ({ required, formData, setFormData, forVal }) => {
             newFormData.errors[forVal] = { type: 'required', message: 'This field is required' }
             newFormData.values[forVal] = { val: event.target.value, isRequired: required }
             setFormData(newFormData)
-        } else if (!event.target.value.match(letters) && event.target.value.length > 0) {
-            newFormData.errors[forVal] = { type: 'pattern', message: 'Can only contain letters.' }
-            newFormData.values[forVal] = { val: event.target.value, isRequired: required }
-            setFormData(newFormData)
-        } else if (event.target.value.match(letters) && event.target.value.length > 0) {
+        } else if (event.target.value.length > 0) {
             delete newFormData.errors[forVal]
             newFormData.values[forVal] = { val: event.target.value, isRequired: required }
             setFormData(newFormData)

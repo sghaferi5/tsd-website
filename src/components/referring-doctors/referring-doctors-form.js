@@ -46,7 +46,8 @@ const ReferringDoctorsForm = () => {
     let newFormData = Object.assign({}, formData);
 
     // let serverUrl = 'http://shiftcook.com/api/referring-doctors.php'
-    let serverUrl = 'http://localhost:8888/api/doctors/index.php'
+    // let serverUrl = 'http://localhost:8888/api/doctors/index.php'
+    let serverUrl = 'https://416sleepdentistry.ca/api/referring-doctors.php'
     serverUrl = serverUrl + "/multiplefiles"
 
     const errorCheck = () => {
@@ -113,7 +114,7 @@ const ReferringDoctorsForm = () => {
         newFormData.values['doctorEmail'].val = ''
         newFormData.values['referralReason'].val = {}
         newFormData.values['radiograph'].val = ''
-        newFormData.messageOnSubmit = { error: false, message: 'Thank you for reffering a patient to us.' }
+        newFormData.messageOnSubmit = { error: false, message: 'Referral submitted. Thank you for trusting us to care for your patient. ' }
 
         if (newFormData.file) {
             delete newFormData.file
@@ -306,8 +307,6 @@ const ReferringDoctorsForm = () => {
                                         list={[{ for: 'none', value: 'No insurance' },
                                         { for: 'private', value: 'Private insurance' },
                                         { for: 'healthySmiles', value: 'Healthy Smiles' },
-                                        { for: 'ow', value: 'OW' },
-                                        { for: 'odsp', value: 'ODSP' },
                                         { for: 'Other', value: 'Other' }]}
                                         listGroup={'patientInsurance'}
                                         formData={formData}

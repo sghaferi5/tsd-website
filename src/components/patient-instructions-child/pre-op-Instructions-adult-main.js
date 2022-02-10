@@ -8,16 +8,16 @@ const PreOpInstructionsAdultMain = () => {
         <div className={styles.preOpInstructions}>
             <div className={styles.headlineSection}>
                 <Container>
-                <Row>
-                    <Col>
-                    <h1>Pre-Operative Instructions – Adult Patients</h1>
-                    </Col>
-                </Row>
+                    <Row>
+                        <Col>
+                            <h1>Pre-Operative Instructions – Adult Patients</h1>
+                        </Col>
+                    </Row>
                 </Container>
-                </div>
+            </div>
             <Container>
                 <Row>
-                    <Col lg={{span: 8, offset: 2}}>
+                    <Col lg={{ span: 8, offset: 2 }}>
                         <section>
                             <h2>Food & Drink</h2>
                             <p>No food or drink is permitted on the day of the appointment. Do not have any solid food or drink after midnight the night before. The only exception is that water, apple juice, or Gatorade <span className={styles.redFont}>(NOT orange juice or milk)</span> are allowed up to 3 hours before your appointment. <span className={styles.redFont}>You must have an empty stomach to avoid vomiting during anaesthesia.</span></p>
@@ -25,8 +25,8 @@ const PreOpInstructionsAdultMain = () => {
                         <section>
                             <h2>Sickness/illness</h2>
                             <p>
-                            If a new cough, cold, flu, fever, or respiratory illness, or illness requiring antibiotics has occurred in the 2-3 weeks prior to the appointment, please call our office and let us know. Please call 416-666-6666 to speak with our office.
-                            </p>                            
+                                If a new cough, cold, flu, fever, or respiratory illness, or illness requiring antibiotics has occurred in the 2 weeks prior to the appointment, please call our office and let us know.
+                            </p>
                         </section>
                         <section>
                             <h2>What to wear</h2>
@@ -42,7 +42,7 @@ const PreOpInstructionsAdultMain = () => {
                         </section>
                         <section>
                             <h2>Cancellation Policy</h2>
-                            <p>One week notice is appreciated to cancel an appointment, and 48 hours notice is required to cancel your appointment. <span className={styles.redFont}>Cancellations with less than 48 hours notice will result in a $250 charge.</span> Your treatment may be delayed and future appointments may be cancelled.</p>
+                            <p>One week notice is appreciated to cancel an appointment, and 48 hours notice is required to cancel your appointment.</p>
                         </section>
 
                     </Col>

@@ -15,7 +15,7 @@ const TeamMemberPhoto = (props) => {
         default:
             return (
                 <StaticImage
-                    src='../../images/our-team-doctor-thumb.jpg'
+                    src='../../images/our-team-use-fill.svg'
                 />
             )
     }

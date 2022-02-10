@@ -1,11 +1,14 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import PreOpInstructionsAdultMain from '../../components/patient-instructions-child/pre-op-Instructions-adult-main.js'
+import Seo from "../../components/Seo"
+
 
 
 const PreOpInstructionsAdult = () => {
     return (
-        <Layout pageTitle='Pre-Operative Instructions – Adult Patients'>
+        <Layout>
+            <Seo title='Pre-Operative Instructions – Adult Patients' />
             <PreOpInstructionsAdultMain />
         </Layout>
     )

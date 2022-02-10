@@ -37,7 +37,7 @@ const FormMessage = ({ formData }) => {
                         <p
                             // ref={messageRef}
                             className={`${styles.successMessage} ${styles.message}`}>
-                            Thank you, your form has been submitted. One of our team members will be contacting you within one week.
+                            Thank you, your form has been submitted. One of our team members will be contacting you within 24-48 hours.
                         </p>
                     </animated.div>
                 </div>

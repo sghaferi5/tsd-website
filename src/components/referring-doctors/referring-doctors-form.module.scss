@@ -1,5 +1,6 @@
 .rdForm {
-    padding: 7rem 0;
+    padding-top: 4.2rem;
+    padding-bottom: 7rem;
     .submitWrapper {
         display: inline-block;
     }
@@ -42,7 +43,7 @@
     }
 
     @media only screen and (max-width: 575.98px) {
-        padding: 4.2rem 0;
+        padding-bottom: 4.2rem;
     }
 
     .submitSuccess {

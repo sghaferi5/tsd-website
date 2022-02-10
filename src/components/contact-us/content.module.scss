@@ -1,6 +1,15 @@
 .contentMain {
     padding: 7.8rem 0;
 
+    a{
+        color: #6C757C;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     h2{
         color: #1D4ED8;
         margin-bottom: 0.8rem;
@@ -47,7 +56,7 @@
 
         &:last-child {
             button {
-                min-width: 18.2rem;
+                min-width: 24rem;
                 padding: 1.2rem;
                 border: 1px solid #1a1a1a;
                 font-size: 1.8rem;

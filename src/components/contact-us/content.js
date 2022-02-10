@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'gatsby'
 
 import * as styles from './content.module.scss'
 
@@ -14,7 +15,7 @@ const Content = () => {
                                 <Col
                                     className={styles.colSection}
                                     lg={12}>
-                                    <p>Book your appointment with Toronto Sleep Dentistry today by calling out office out our online form. </p>
+                                    <p>Book your appointment with Toronto Sleep Dentistry today by calling our office or filling out our <Link to='/make-an-appointment/'>online form</Link>. </p>
                                 </Col>
                                 <Col
                                     className={styles.colSection}
@@ -30,25 +31,33 @@ const Content = () => {
                                     lg={4}>
                                     <h2>Get In Touch</h2>
                                     <ul>
-                                        <li>Phone: 416.456.3219</li>
-                                        <li>Fax: 416.456.3219</li>
-                                        <li>Email: info@416sleepdentistry.com</li>
+                                        <li>Phone:<a href='tel:4165355561'> 416 535 5561</a></li>
+                                        <li>Fax: 416 535 2876</li>
+                                        <li>Email: <a href='mailto:info@416sleepdentistry.ca'>info@416sleepdentistry.ca</a></li>
                                     </ul>
                                 </Col>
                                 <Col
                                     className={styles.colSection}
                                     lg={4}>
                                     <h2>Address</h2>
-                                    <p>
-                                        1584 Bloor Street W,<br />
-                                        Toronto, ON M6P 1A7
-                                    </p>
+                                    <a href='
+                                    https://www.google.com/maps/dir//1584+Bloor+St+W+Toronto,+ON+M6P+1A7/@43.6561466,-79.454577,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x882b343a09719cf3:0x19f18383411b289a!2m2!1d-79.454577!2d43.6561466
+                                    '
+                                        target="_blank">
+                                        <p>
+                                            1584 Bloor Street W,<br />
+                                            Toronto, ON M6P 1A7
+                                        </p>
+                                    </a>
                                 </Col>
                                 <Col
                                     className={styles.colSection}
                                     lg={12}>
-                                    <button>Make an Appointment</button>
-                                    <button>Get Directions</button>
+                                    <Link to='/make-an-appointment/'><button>Make an Appointment</button></Link>
+                                    <a href='
+                                    https://www.google.com/maps/dir//1584+Bloor+St+W+Toronto,+ON+M6P+1A7/@43.6561466,-79.454577,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x882b343a09719cf3:0x19f18383411b289a!2m2!1d-79.454577!2d43.6561466
+                                    '
+                                        target="_blank"><button>Get Directions</button></a>
                                 </Col>
                             </Row>
                         </Container>

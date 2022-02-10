@@ -90,13 +90,14 @@ const BirthDayInput = ({ validate, formData, setFormData }) => {
         <div className={styles.birthdayInput}>
             <div className={styles.birthdayForm}>
                 <div class={styles.twoDigitInput}>
-                    <p>Month</p>
+                    <p>Day</p>
                     <input
                         ref={monthInput}
                         type='text'
                         maxlength="2"
-                        id='bdMonth'
-                        name='bdMonth'
+                        id='bdDay'
+                        name='bdDay'
+                        placeholder='dd'
                         data-spot={0}
 
                         onChange={handleValidation}>
@@ -104,14 +105,15 @@ const BirthDayInput = ({ validate, formData, setFormData }) => {
                     </input >
                 </div>
                 <div class={styles.twoDigitInput}>
-                    <p>Day</p>
+                    <p>Month</p>
                     <input
                         ref={dayInput}
                         type='text'
                         maxlength="2"
-                        id='bdDay'
-                        name='bdDay'
+                        id='bdMonth'
+                        name='bdMonth'
                         data-spot={1}
+                        placeholder='mm'
                         onChange={handleValidation}>
                     </input >
                 </div>
@@ -124,6 +126,7 @@ const BirthDayInput = ({ validate, formData, setFormData }) => {
                         id='bdYear'
                         name='bdYear'
                         data-spot={2}
+                        placeholder='yyyy'
                         onChange={handleValidation}>
                     </input >
                 </div>

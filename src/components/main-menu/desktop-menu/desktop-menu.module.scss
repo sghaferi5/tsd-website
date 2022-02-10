@@ -112,8 +112,6 @@ header.menuDesktop {
             .deskTopMenuLogo {
                 position: absolute;
                 left: 1.6rem;
-
-                
             }    
             .menuLogoXl {
                 @media (min-width: 992px) {
@@ -124,6 +122,8 @@ header.menuDesktop {
                 }
                 img {
                     height: 3.0rem;
+                    display: block;
+                    border-radius: 0;
                 }    
             }
             .menuLogoSq {
@@ -133,8 +133,13 @@ header.menuDesktop {
                 @media (min-width: 1200px) {
                     display: none;
                 }
+                a{ 
+                    text-decoration: none;
+                }
                 img {
                     height: 5.5rem;
+                    border-radius: 0;
+                    display: block;
                 }    
             }
 

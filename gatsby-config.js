@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "My Gatsby Site",
+    siteUrl: "https://www.416sleepdentistry.ca",
+    title: "Toronto Sleep Dentistry",
+    description: "Specialists In Dental Anaesthesia",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     `gatsby-transformer-sharp`,

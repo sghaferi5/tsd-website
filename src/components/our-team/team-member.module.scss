@@ -1,11 +1,5 @@
-.memberBlock {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+.blockHover {
     cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-
     &:hover {
         transform: scale(1.01);
         box-shadow: 0px 4px 16px rgba(46, 41, 51, 0.08), 0px 8px 24px rgba(71, 63, 79, 0.16); 
@@ -16,7 +10,13 @@
         }
 
     }
-
+}
+.memberBlock {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 
     .memberInfo {
         

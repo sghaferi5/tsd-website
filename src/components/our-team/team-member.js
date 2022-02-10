@@ -13,6 +13,14 @@ const TeamMember = (props) => {
         setShowModal(true)
     }
 
+    const addClassName = (disabled) => {
+        if (disabled) {
+            return styles.memberBlock
+        } else {
+            return `${styles.memberBlock} ${styles.blockHover}`
+        }
+    }
+
 
 
 
@@ -24,12 +32,12 @@ const TeamMember = (props) => {
                 setShowModal={setShowModal} />
 
             <div
-                onClick={openModal}
-                className={styles.memberBlock}>
+                onClick={props.disable ? null : openModal}
+                className={addClassName(props.disable)}>
                 <TeamMemberPhoto thumbPhoto={props.thumbPhoto} />
                 <div className={styles.memberInfo}>
                     <h2>{props.name}</h2>
-                    <p>Doctor</p>
+                    <p>{props.position}</p>
                 </div>
             </div>
         </div>

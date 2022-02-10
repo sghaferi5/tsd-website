@@ -12,7 +12,8 @@ const MainContent = () => {
                 <Row>
                     <Col lg={{ span: 8, offset: 2 }}>
                         <div className={styles.mainTop}>
-                            <p>Before and after your sleep dentistry appointment, there are some important instructions which must be followed, so we can ensure you have the a safe and successful procedure. We review these instructions in detail with you during your consultation appointment, but you can also find our written anaesthesia pre-operative and pos-operative instructions below.
+                            <p>
+                                Before and after your sleep dentistry appointment, there are some important instructions which must be followed, so we can ensure you have a safe and successful procedure. We review these instructions in detail with you during your consultation appointment, but you can also find our written anaesthesia preoperative and postoperative instructions below.
                             </p>
                         </div>
                     </Col>

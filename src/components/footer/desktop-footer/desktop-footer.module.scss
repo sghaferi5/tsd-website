@@ -1,7 +1,65 @@
 .footerMain {
     position: absolute;
     bottom: 0;
-    height: 200px;
+    padding: 4rem 0;
+    height: 29rem;
     width: 100%;
-    background-color: lightgray;
+    background-color: #f7f7f7;
+    // background-color: tomato;
+
+    .footerLogo {
+        width: 26rem;
+        border-radius: 0;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .footerLine{
+        border-top: 1px #e9ecef solid;
+        margin: 3.6rem 0;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-top: 4px;
+
+        li {
+            a{
+                color: #1a1a1a;
+                font-size: 1.2rem;
+                line-height: 0;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .footerCopy {
+        color: #6c757d;
+        font-size: 1.2rem;
+    }
 }
+
+@media only screen and (max-width: 767.98px) {
+  .footerMain {
+    height: 65rem;
+    .footerColWrapper {
+        margin-top: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 767.99px) and (max-width: 1199.98px) {
+    .footerMain {
+      height: 42rem;
+      .footerColWrapper {
+          margin-top: 3rem;
+      }
+    }
+  }

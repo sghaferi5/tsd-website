@@ -8,7 +8,7 @@ import '../styles/bootstrap-grid.min.css'
 import { useEffect } from 'react'
 
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
     useEffect(() => {
         document.documentElement.style.overflow = null
     })
@@ -16,7 +16,6 @@ const Layout = ({ pageTitle, children }) => {
     return (
 
         <div>
-            <title>{pageTitle}</title>
             <div class='pageContainer'>
                 <MainMenu />
                 <main>

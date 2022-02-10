@@ -1,11 +1,13 @@
 import * as React from 'react'
-
 import Layout from '../components/layout'
 import PatienInfoMain from '../components/patient-information-page/patient-information-main'
+import Seo from "../components/Seo"
+
 
 const PatientInfo = () => {
     return (
-        <Layout pageTitle='Patient Information'>
+        <Layout>
+            <Seo title='Patient Information' />
             <PatienInfoMain />
         </Layout>
     )

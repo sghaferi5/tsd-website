@@ -20,8 +20,9 @@ import * as styles from './make-appointment-main.module.scss'
 
 const MakeAppointmentMain = () => {
 
-    const API_PATH = 'http://shiftcook.com/api/make-appointment.php'
+    // const API_PATH = 'http://shiftcook.com/api/make-appointment.php'
     // const API_PATH = 'http://localhost:8888/api/contact/index.php'
+    const API_PATH = 'https://416sleepdentistry.ca/api/make-appointment.php'
     const spinner = useRef()
 
     const [formData, setFormData] = useState({
@@ -174,7 +175,7 @@ const MakeAppointmentMain = () => {
                             <Col lg={{ span: 8, offset: 2 }}>
                                 <h1>Make an Appointment</h1>
                                 <p>
-                                    To make a consultation appointment for sleep dentistry for you or your child, you can fill out this form. Once you have completed the form, please press submit. A staff member from our office will contact you within one week to schedule your appointment.
+                                    To make a consultation appointment for sleep dentistry for you or your child, you can fill out this form. Once you have completed the form, please press submit. A staff member from our office will contact you within 24-48 hours to schedule your appointment.
                                     (Please note that if your family dentist has referred you to our office, you do not need to fill out this form, and we will be contacting you directly to book your consultation appointment.)
 
                                 </p>

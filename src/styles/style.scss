@@ -64,9 +64,17 @@ button {
 .pageContainer {
     min-height: 100vh;
     padding-top: 70px;
-    padding-bottom: 200px;
+    padding-bottom: 29rem;
     position: relative;
     flex-direction: column;
+
+    @media only screen and (max-width: 767.98px) {
+        padding-bottom: 65rem;
+      }
+      @media only screen and (min-width: 767.99px) and (max-width: 1199.98px) {
+        padding-bottom: 42rem;
+        
+      }
 }
 
 // FORM components

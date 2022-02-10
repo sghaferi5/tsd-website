@@ -18,24 +18,32 @@ const OurTeamMain = () => {
                                 name={Members.doctor.name}
                                 info={Members.doctor}
                                 thumbPhoto={Members.doctor.photo}
+                                position='Doctor'
+                                disable={false}
                             />
                         </Col>
                         <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.nurse.name}
                                 info={Members.nurse}
+                                position='Nurses'
+                                disable={true}
                             />
                         </Col>
                         <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.nurse.name}
                                 info={Members.nurse}
+                                position='Assistants'
+                                disable={true}
                             />
                         </Col>
                         <Col lg={3} md={6}>
                             <TeamMember
                                 name={Members.nurse.name}
                                 info={Members.nurse}
+                                position='Receptionist'
+                                disable={true}
                             />
                         </Col>
                     </Row>
