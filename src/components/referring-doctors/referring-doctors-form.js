@@ -39,6 +39,7 @@ const ReferringDoctorsForm = () => {
                 doctorEmail: { val: '', isRequired: false },
                 referralReason: { val: {}, isRequired: false },
                 radiograph: { val: '', isRequired: false },
+                otherInput: { val: '' },
             },
             messageOnSubmit: {}
         }
@@ -114,6 +115,7 @@ const ReferringDoctorsForm = () => {
         newFormData.values['doctorEmail'].val = ''
         newFormData.values['referralReason'].val = {}
         newFormData.values['radiograph'].val = ''
+        newFormData.values['otherInput'].val = ''
         newFormData.messageOnSubmit = { error: false, message: 'Referral submitted. Thank you for trusting us to care for your patient. ' }
 
         if (newFormData.file) {
@@ -130,6 +132,7 @@ const ReferringDoctorsForm = () => {
 
         //disable treatmentNotes input
         document.getElementById('treatmentNotes').disabled = true;
+        document.getElementById('otherInput').disabled = true;
 
         //Clear file input and hide it
         document.querySelector("input[type='file']").files = null
@@ -148,7 +151,7 @@ const ReferringDoctorsForm = () => {
             document.getElementById("submitBtn").disabled = false
             newFormData.messageOnSubmit = {}
             setFormData(newFormData)
-            console.log('error')
+            // console.log('error')
         } else {
             // PUSH DATA FROM STATE TO FormData OBJECT
             Object.entries(formData.values).forEach(entry => {
@@ -194,7 +197,7 @@ const ReferringDoctorsForm = () => {
                 .then(res => { // then print response status
                     spinner.current.style.display = 'none'
                     document.getElementById("submitBtn").disabled = false
-                    console.log(res.data.sent)
+                    // console.log(res.data.data)
                     resetFormValues(e)
 
                 })
