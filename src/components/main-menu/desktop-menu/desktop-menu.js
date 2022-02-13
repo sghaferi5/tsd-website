@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import logoSvg from '../../../images/tsd_logo_navy.svg'
 import logoSquare from '../../../images/tsd-sqr-logo.jpg'
-
+import logoSquareSvg from '../../../images/tsd_sq_logo.svg'
 
 import * as styles from './desktop-menu.module.scss'
 
@@ -55,7 +55,7 @@ const DesktopMenu = () => {
                 <div className={`${styles.menuLogoSq} ${styles.deskTopMenuLogo}`}>
                     <Link to='/'>
                         <img
-                            src={logoSquare}
+                            src={logoSquareSvg}
                             alt='Toronto Sleep Dentistry Logo'
                         />
                     </Link>

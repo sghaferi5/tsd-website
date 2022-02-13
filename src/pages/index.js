@@ -10,7 +10,8 @@ import Seo from "../components/Seo"
 const IndexPage = () => {
   return (
     <Layout pageTitle='Home Page'>
-      <Seo title='Home' />
+      <Seo title='Home'
+        description="Are you looking to have dental treatment done asleep or under sedation? Call Toronto Sleep Dentistry and visit one of our sleep dentistry specialists today!" />
       <HomeMain />
     </Layout>
   )

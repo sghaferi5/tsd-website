@@ -7,7 +7,8 @@ import Seo from "../components/Seo"
 const OurTeam = () => {
     return (
         <Layout>
-            <Seo title='Our Team' />
+            <Seo title='Our Team'
+                description='Dr. Soheil Khojasteh' />
             <OurTeamMain />
         </Layout>
     )

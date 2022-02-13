@@ -8,7 +8,8 @@ import Seo from "../components/Seo"
 const ReferringDoctors = () => {
     return (
         <Layout>
-            <Seo title='Referring Doctors' />
+            <Seo title='Referring Doctors'
+                description='Dental Anaesthesia Referral. Sleep Dentistry Referral.' />
             <ReferringDoctorsMain />
         </Layout>
     )

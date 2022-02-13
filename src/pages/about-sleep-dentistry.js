@@ -6,7 +6,8 @@ import Seo from "../components/Seo"
 const AboutSleepDentistry = () => {
     return (
         <Layout>
-            <Seo title='About Sleep Dentistry' />
+            <Seo title='About Sleep Dentistry'
+                description='What is Sleep Dentistry? Dental Anaesthesia. What is Dental Sedation? Patients who need sleep dentistry. Safety of Sleep Dentistry.' />
             <AboutSleepDentistryMain />
         </Layout>
     )
