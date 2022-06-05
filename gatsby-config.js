@@ -8,9 +8,19 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Toronto Sleep Dentistry`,
+        start_url: `/`,
+        icon: `src/images/tsd_icon.png`
+      }
+    },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
     "gatsby-plugin-web-font-loader",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
